@@ -3,40 +3,31 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public KeyCode[] inputKeys;
+    public KeyCode powerUpKey; // Tecla para activar el poder
     public Detector[] detectors;
     
-    private AudioManager audioManager;
-
-    void Start()
-    {
-        audioManager = FindFirstObjectByType<AudioManager>();
-        if (audioManager == null) { Debug.LogError("ERROR: No se encontró el AudioManager en la escena."); }
-    }
-
     void Update()
     {
+        // Recorremos las teclas de las notas
         for (int i = 0; i < inputKeys.Length; i++)
         {
             if (Input.GetKeyDown(inputKeys[i]))
             {
-                if (detectors[i] == null)
+                if (detectors[i].TryHitNote())
                 {
-                    Debug.LogError($"ERROR: El detector para el carril {i} no está asignado en el Inspector.");
-                    continue;
-                }
-
-                bool success = detectors[i].TryHitNote();
-
-                if (success)
-                {
-                    audioManager.HitNote(i);
+                    GameManager.instance.OnNoteHit(i);
                 }
                 else
                 {
-                    audioManager.PlayMissSound();
-                    audioManager.MissNote(i);
+                    GameManager.instance.OnNoteMiss(i);
                 }
             }
+        }
+        
+        // Comprobamos la tecla del poder
+        if (Input.GetKeyDown(powerUpKey))
+        {
+            GameManager.instance.powerUpManager.TryActivatePowerUp();
         }
     }
 }
