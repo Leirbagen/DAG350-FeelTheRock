@@ -3,28 +3,35 @@ using UnityEngine;
 public class Detector : MonoBehaviour
 {
     public int laneID;
-    private Nota noteInTrigger = null;
+    private GameObject noteInTrigger = null;
     private AudioManager audioManager;
 
     private void Start()
     {
+        // Usamos FindFirstObjectByType que es más moderno.
         audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Solo reaccionamos a objetos con el Tag "Nota".
         if (other.CompareTag("Nota"))
         {
-            noteInTrigger = other.GetComponent<Nota>();
+            noteInTrigger = other.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Nota") && other.gameObject == noteInTrigger?.gameObject)
+        // Si la nota que sale es la que teníamos registrada, es un fallo.
+        if (other.gameObject == noteInTrigger)
         {
-            audioManager.MissNote(laneID);
-            audioManager.PlayMissSound();
+            if (audioManager != null)
+            {
+                audioManager.MissNote(laneID);
+                audioManager.PlayMissSound();
+            }
+            // Olvidamos la nota para no registrar múltiples fallos.
             noteInTrigger = null;
         }
     }
@@ -33,11 +40,11 @@ public class Detector : MonoBehaviour
     {
         if (noteInTrigger != null)
         {
-            Nota noteToHit = noteInTrigger; 
-            noteInTrigger = null; 
+            // Guardamos la referencia, la anulamos para evitar fallos falsos y luego destruimos.
+            GameObject noteToDestroy = noteInTrigger;
+            noteInTrigger = null;
             
-            noteToHit.Hit(); 
-            
+            Destroy(noteToDestroy);
             return true;
         }
         return false;

@@ -1,42 +1,38 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [Header("Configuración de Teclas")]
     public KeyCode[] inputKeys;
-    public Detector[] detectors;
-    
-    private AudioManager audioManager;
+    public KeyCode powerUpKey = KeyCode.Space; // Tecla para activar el poder
 
-    void Start()
-    {
-        audioManager = FindFirstObjectByType<AudioManager>();
-        if (audioManager == null) { Debug.LogError("ERROR: No se encontró el AudioManager en la escena."); }
-    }
+    [Header("Referencias a Detectores")]
+    public List<Detector> detectors;
 
     void Update()
     {
+        // Lógica para las notas
         for (int i = 0; i < inputKeys.Length; i++)
         {
             if (Input.GetKeyDown(inputKeys[i]))
             {
-                if (detectors[i] == null)
+                if (detectors[i].TryHitNote())
                 {
-                    Debug.LogError($"ERROR: El detector para el carril {i} no está asignado en el Inspector.");
-                    continue;
-                }
-
-                bool success = detectors[i].TryHitNote();
-
-                if (success)
-                {
-                    audioManager.HitNote(i);
+                    GameManager.instance.OnNoteHit(i);
                 }
                 else
                 {
-                    audioManager.PlayMissSound();
-                    audioManager.MissNote(i);
+                    GameManager.instance.OnNoteMiss(i);
                 }
             }
+        }
+
+        // --- ¡NUEVA LÓGICA PARA ACTIVAR EL PODER! ---
+        if (Input.GetKeyDown(powerUpKey))
+        {
+            // Le pedimos al PowerUpManager que intente activarse.
+            GameManager.instance.powerUpManager.TryActivatePowerUp();
         }
     }
 }
