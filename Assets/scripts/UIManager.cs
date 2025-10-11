@@ -1,23 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI; // Necesario para controlar Sliders
-using TMPro; // Necesario si usas TextMeshPro
+using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     [Header("Referencias de la Interfaz")]
-    // Arrastra aquí tus objetos de UI desde la Jerarquía
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI comboText;
     public TextMeshProUGUI multiplierText;
     public Slider healthBar;
     public Slider powerUpBar;
     
-    // Referencia al ScoreManager para saber cuándo mostrar el combo
     private ScoreManager scoreManager;
 
     void Start()
     {
-        // Buscamos el ScoreManager al empezar
         scoreManager = FindFirstObjectByType<ScoreManager>();
     }
 
@@ -31,7 +28,6 @@ public class UIManager : MonoBehaviour
     {
         if (comboText != null && scoreManager != null)
         {
-            // Solo mostramos el texto del combo si es mayor o igual al umbral
             if (combo >= scoreManager.comboToShowThreshold)
             {
                 comboText.gameObject.SetActive(true);
@@ -48,7 +44,6 @@ public class UIManager : MonoBehaviour
     {
         if (multiplierText != null)
         {
-            // Solo mostramos el multiplicador si es mayor que 1
             if (multiplier > 1)
             {
                 multiplierText.gameObject.SetActive(true);
@@ -65,8 +60,11 @@ public class UIManager : MonoBehaviour
     {
         if (healthBar != null)
         {
-            // Normalizamos el valor de la vida entre 0 y 1 para el slider
-            healthBar.value = (float)currentHealth / maxHealth;
+            float healthValue = (float)currentHealth / maxHealth;
+            healthBar.value = healthValue;
+            
+            // --- MENSAJE DE DIAGNÓSTICO ---
+            Debug.Log($"<color=cyan>UI MANAGER: Actualizando HealthBar. currentHealth={currentHealth}, maxHealth={maxHealth}. Valor final: {healthValue}</color>");
         }
     }
 
@@ -74,8 +72,11 @@ public class UIManager : MonoBehaviour
     {
         if (powerUpBar != null && maxValue > 0)
         {
-            // Normalizamos el valor del poder entre 0 y 1 para el slider
-            powerUpBar.value = (float)currentValue / maxValue;
+            float powerUpValue = (float)currentValue / maxValue;
+            powerUpBar.value = powerUpValue;
+
+            // --- MENSAJE DE DIAGNÓSTICO ---
+            Debug.Log($"<color=lime>UI MANAGER: Actualizando PowerUpBar. currentValue={currentValue}, maxValue={maxValue}. Valor final: {powerUpValue}</color>");
         }
     }
 }

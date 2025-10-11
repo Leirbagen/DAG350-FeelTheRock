@@ -1,75 +1,78 @@
+using System.Collections;
 using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    [Header("Configuración")]
-    public int comboToFill = 20; // Combo necesario para llenar la barra
-    public float powerUpDuration = 10f; // Duración del multiplicador
+    [Header("Configuración del Poder")]
+    public int comboToFill = 20;
+    public int powerUpMultiplier = 2;
+    public float powerUpDuration = 10f;
 
-    public int currentPowerUpValue = 0;
-    private bool isPowerUpActive = false;
-    private float powerUpTimer = 0f;
+    [Header("Estado Actual (Solo para Debug)")]
+    [SerializeField] private int currentPowerUpValue = 0;
+    [SerializeField] private bool isReady = false;
+    [SerializeField] private bool isActive = false;
 
-    void Update()
-    {
-        // Lógica del temporizador del poder
-        if (isPowerUpActive)
-        {
-            powerUpTimer -= Time.deltaTime;
-            if (powerUpTimer <= 0)
-            {
-                DeactivatePowerUp();
-            }
-        }
-    }
-
-    // Se llama al acertar una nota
     public void OnNoteHit(int currentCombo)
     {
-        // Solo llenamos la barra si el combo es continuo
-        if (currentCombo > 0 && currentPowerUpValue < comboToFill)
+        // Solo llenamos la barra si el poder no está listo y no está activo
+        if (!isReady && !isActive)
         {
             currentPowerUpValue = currentCombo;
+            GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
+
             if (currentPowerUpValue >= comboToFill)
             {
-                currentPowerUpValue = comboToFill;
-                // ¡Barra llena! Aquí podrías añadir un efecto de sonido o visual
+                isReady = true;
+                // Opcional: añadir un sonido o efecto para avisar que está listo
             }
         }
     }
 
-    // Se llama al fallar una nota
     public void OnNoteMiss()
     {
-        // Si el poder no está activo, la barra se vacía al fallar
-        if (!isPowerUpActive)
+        // Si fallamos mientras llenamos la barra (y no está activo), la vaciamos
+        if (!isActive)
         {
             currentPowerUpValue = 0;
+            isReady = false;
+            GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
         }
     }
-    
-    // Método para ser llamado desde el InputManager cuando se activa el poder
+
+    // --- ¡NUEVA FUNCIÓN PARA ACTIVAR EL PODER! ---
     public void TryActivatePowerUp()
     {
-        if(currentPowerUpValue >= comboToFill && !isPowerUpActive)
+        if (isReady && !isActive)
         {
-            ActivatePowerUp();
+            isReady = false;
+            StartCoroutine(PowerUpSequence());
         }
     }
 
-    private void ActivatePowerUp()
+    private IEnumerator PowerUpSequence()
     {
-        isPowerUpActive = true;
-        powerUpTimer = powerUpDuration;
-        GameManager.instance.OnMultiplierChanged(2);
-        // Aquí podrías añadir la lógica para que las notas cambien de color
-    }
+        isActive = true;
 
-    private void DeactivatePowerUp()
-    {
-        isPowerUpActive = false;
-        currentPowerUpValue = 0; // La barra se vacía
+        // Le decimos al GameManager que aplique el multiplicador
+        GameManager.instance.OnMultiplierChanged(powerUpMultiplier);
+        
+        // Aquí puedes añadir la lógica para cambiar el color de las notas
+        // Ejemplo: NoteSpawner.instance.ActivatePowerUpMode(true);
+
+        // Vaciamos la barra en la UI
+        currentPowerUpValue = 0;
+        GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
+        
+        // Esperamos la duración del poder
+        yield return new WaitForSeconds(powerUpDuration);
+
+        // Le decimos al GameManager que vuelva al multiplicador normal
         GameManager.instance.OnMultiplierChanged(1);
-        // Aquí volverías a poner las notas a sus colores originales
+        
+        // Aquí desactivaríamos el modo de cambio de color de notas
+        // Ejemplo: NoteSpawner.instance.ActivatePowerUpMode(false);
+        
+        isActive = false;
     }
 }

@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Referencias a Managers")]
+    [Header("Referencias a Managers (Arrastrar desde la Jerarquía)")]
     public ScoreManager scoreManager;
     public HealthManager healthManager;
     public PowerUpManager powerUpManager;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Debug.Log("<color=purple>GAME MANAGER: Instancia creada correctamente.</color>");
         }
         else
         {
@@ -25,17 +26,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Reseteamos el tiempo por si acaso se quedó pausado en una partida anterior
         Time.timeScale = 1f;
 
-        // Validamos que todos los managers estén asignados para evitar errores
-        if (uiManager == null || scoreManager == null || healthManager == null || powerUpManager == null)
+        if (uiManager == null || scoreManager == null || healthManager == null || powerUpManager == null || audioManager == null)
         {
-            Debug.LogError("ERROR: Faltan referencias de Managers en el GameManager!");
+            Debug.LogError("ERROR: Faltan referencias de Managers en el GameManager! Arrástralos en el Inspector.");
             return;
         }
 
-        // Inicializamos los valores de la UI al empezar
         uiManager.UpdateScore(scoreManager.currentScore);
         uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
         uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
@@ -43,49 +41,50 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateMultiplier(scoreManager.currentMultiplier);
     }
 
-    // Método centralizado para cuando se acierta una nota
     public void OnNoteHit(int laneID)
     {
+        // Mensaje para confirmar que la llamada fue recibida
+        Debug.Log($"<color=#006400>GAME MANAGER: OnNoteHit RECIBIDO para carril {laneID}</color>");
+
         audioManager.HitNote(laneID);
         scoreManager.AddScore();
         healthManager.OnNoteHit();
         powerUpManager.OnNoteHit(scoreManager.currentCombo);
 
-        // Actualizamos toda la UI
-        uiManager.UpdateScore(scoreManager.currentScore);
-        uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
-        uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
-        uiManager.UpdateCombo(scoreManager.currentCombo);
+        UpdateAllUI();
     }
 
-    // Método centralizado para cuando se falla una nota
     public void OnNoteMiss(int laneID)
     {
+        // Mensaje para confirmar que la llamada fue recibida
+        Debug.Log($"<color=#8B0000>GAME MANAGER: OnNoteMiss RECIBIDO para carril {laneID}</color>");
+
         audioManager.MissNote(laneID);
         audioManager.PlayMissSound();
         scoreManager.BreakCombo();
         healthManager.OnNoteMiss();
         powerUpManager.OnNoteMiss();
 
-        // Actualizamos toda la UI
-        uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
-        uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
-        uiManager.UpdateCombo(scoreManager.currentCombo);
+        UpdateAllUI();
     }
     
-    // El PowerUpManager nos avisará cuando el multiplicador cambie
     public void OnMultiplierChanged(int newMultiplier)
     {
         scoreManager.SetMultiplier(newMultiplier);
         uiManager.UpdateMultiplier(newMultiplier);
     }
     
-    // El HealthManager nos avisará cuando el juego termine
     public void OnGameOver()
     {
-        // Aquí irá la lógica para mostrar la ventana de "Game Over"
         Debug.Log("GAME OVER!");
-        // Detenemos el tiempo para pausar el juego
         Time.timeScale = 0f;
+    }
+    
+    private void UpdateAllUI()
+    {
+        uiManager.UpdateScore(scoreManager.currentScore);
+        uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
+        uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
+        uiManager.UpdateCombo(scoreManager.currentCombo);
     }
 }
