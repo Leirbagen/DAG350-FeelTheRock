@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +11,15 @@ public class GameManager : MonoBehaviour
     public PowerUpManager powerUpManager;
     public UIManager uiManager;
     public AudioManager audioManager;
+    public InputManager inputManager;
+    public bool isGameOver = false;
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            Debug.Log("<color=purple>GAME MANAGER: Instancia creada correctamente.</color>");
+            //Debug.Log("<color=purple>GAME MANAGER: Instancia creada correctamente.</color>");
         }
         else
         {
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         if (uiManager == null || scoreManager == null || healthManager == null || powerUpManager == null || audioManager == null)
         {
-            Debug.LogError("ERROR: Faltan referencias de Managers en el GameManager! Arrástralos en el Inspector.");
+            //Debug.LogError("ERROR: Faltan referencias de Managers en el GameManager! Arrástralos en el Inspector.");
             return;
         }
 
@@ -57,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void OnNoteMiss(int laneID)
     {
         // Mensaje para confirmar que la llamada fue recibida
-        Debug.Log($"<color=#8B0000>GAME MANAGER: OnNoteMiss RECIBIDO para carril {laneID}</color>");
+        //Debug.Log($"<color=#8B0000>GAME MANAGER: OnNoteMiss RECIBIDO para carril {laneID}</color>");
 
         audioManager.MissNote(laneID);
         audioManager.PlayMissSound();
@@ -76,10 +79,51 @@ public class GameManager : MonoBehaviour
     
     public void OnGameOver()
     {
-        Debug.Log("GAME OVER!");
+        if(isGameOver)
+            return;
+        isGameOver = true;
         Time.timeScale = 0f;
+        audioManager?.PauseAll();
+        if (inputManager!= null)
+            inputManager.enabled = false;
+
+        // 3. Muestra el panel de Game Over
+        uiManager?.ShowGameOverPanel(true);
     }
-    
+    public void RestartRun()
+    {
+        // 1. Reactiva tiempo y limpia flags
+        Time.timeScale = 1f;
+        isGameOver = false;
+
+        // 2. Reinicia lógica de juego
+        scoreManager.currentScore = 0;
+        scoreManager.currentCombo = 0;
+        scoreManager.SetMultiplier(1);
+
+        healthManager.ResetHealth();   // 🔧 Asegúrate de tener este método
+        powerUpManager.ResetPower();   // 🔧 También este
+
+        // 3. Elimina notas vivas (si no usas pool)
+        foreach (var note in GameObject.FindGameObjectsWithTag("Nota"))
+            Destroy(note);
+
+        // 4. Reinicia música sincronizada
+        audioManager?.StopAllAudio();
+        audioManager?.StartAllSynced();
+
+        // 5. Oculta panel y reactiva input
+        uiManager?.ShowGameOverPanel(false);
+        if (inputManager != null)
+            inputManager.enabled = true;
+    }
+
+    public void irAlMenu(string sceneName = "Menu")
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(sceneName);
+    }
+
     private void UpdateAllUI()
     {
         uiManager.UpdateScore(scoreManager.currentScore);

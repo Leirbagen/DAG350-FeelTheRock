@@ -9,7 +9,7 @@ public class PowerUpManager : MonoBehaviour
     public float powerUpDuration = 10f;
 
     [Header("Estado Actual (Solo para Debug)")]
-    [SerializeField] private int currentPowerUpValue = 0;
+    [SerializeField] public int currentPowerUpValue = 0;
     [SerializeField] private bool isReady = false;
     [SerializeField] private bool isActive = false;
 
@@ -27,6 +27,14 @@ public class PowerUpManager : MonoBehaviour
                 // Opcional: añadir un sonido o efecto para avisar que está listo
             }
         }
+    }
+
+    public void ResetPower()
+    {
+        currentPowerUpValue = 0;
+        isReady = false;
+        isActive = false;
+        GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
     }
 
     public void OnNoteMiss()
@@ -50,7 +58,7 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PowerUpSequence()
+    public IEnumerator PowerUpSequence()
     {
         isActive = true;
 

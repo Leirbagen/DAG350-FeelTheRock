@@ -25,7 +25,7 @@ public class Nota_Movimiento : MonoBehaviour
         float progress = timeElapsed / fallTime;
         transform.position = Vector3.Lerp(startPos, endPos, progress);
 
-        if (progress >= 1.1f) 
+        if (progress >= 1.05f) 
         {
             Destroy(gameObject);
         }

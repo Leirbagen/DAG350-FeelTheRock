@@ -5,6 +5,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [Header("Referencias de la Interfaz")]
+    public GameObject gameOverPanel;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI comboText;
     public TextMeshProUGUI multiplierText;
@@ -15,7 +16,17 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        scoreManager = FindFirstObjectByType<ScoreManager>();
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+        
+
+            scoreManager = FindFirstObjectByType<ScoreManager>();
+    }
+
+    public void ShowGameOverPanel(bool show)
+    {
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(show);
     }
 
     public void UpdateScore(int score)
@@ -64,7 +75,7 @@ public class UIManager : MonoBehaviour
             healthBar.value = healthValue;
             
             // --- MENSAJE DE DIAGNÓSTICO ---
-            Debug.Log($"<color=cyan>UI MANAGER: Actualizando HealthBar. currentHealth={currentHealth}, maxHealth={maxHealth}. Valor final: {healthValue}</color>");
+            //Debug.Log($"<color=cyan>UI MANAGER: Actualizando HealthBar. currentHealth={currentHealth}, maxHealth={maxHealth}. Valor final: {healthValue}</color>");
         }
     }
 
@@ -76,7 +87,7 @@ public class UIManager : MonoBehaviour
             powerUpBar.value = powerUpValue;
 
             // --- MENSAJE DE DIAGNÓSTICO ---
-            Debug.Log($"<color=lime>UI MANAGER: Actualizando PowerUpBar. currentValue={currentValue}, maxValue={maxValue}. Valor final: {powerUpValue}</color>");
+            //Debug.Log($"<color=lime>UI MANAGER: Actualizando PowerUpBar. currentValue={currentValue}, maxValue={maxValue}. Valor final: {powerUpValue}</color>");
         }
     }
 }

@@ -39,6 +39,12 @@ public class HealthManager : MonoBehaviour
         }
     }
 
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        comboCounterForHealing = 0;
+    }
+
     // Método para curar vida
     public void Heal(int amount)
     {
@@ -48,4 +54,14 @@ public class HealthManager : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
+    public void Damage(int amount)
+{
+    currentHealth -= amount;
+
+    if (currentHealth <= 0)
+    {
+        currentHealth = 0;
+        GameManager.instance.OnGameOver(); // 🔥 llama al GameOver
+    }
+}
 }

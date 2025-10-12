@@ -4,77 +4,128 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")]
-    [Tooltip("Arrastra aquí los AudioSource para cada instrumento. El orden debe coincidir con las pistas en el SongChart.")]
     public List<AudioSource> instrumentSources;
-    [Tooltip("El AudioSource para la música de fondo no jugable.")]
     public AudioSource backingTrackSource;
-    [Tooltip("El AudioSource dedicado a los efectos de sonido cortos.")]
-    public AudioSource sfxSource; // Nuevo
+    public AudioSource sfxSource;
 
     [Header("Audio Clips")]
-    [Tooltip("El sonido que se reproduce al fallar una nota.")]
-    public AudioClip missSoundClip; // Nuevo
+    public AudioClip missSoundClip;
 
     [Header("Configuración de Volumen")]
-    private float[] targetInstrumentVolumes;
     public float volumeFadeSpeed = 10f;
+    private float[] targetInstrumentVolumes;
 
     public static AudioManager instance;
+
+    // 🔹 Estado de reproducción sincronizada
+    private bool started = false;
+    private double startDspTime; // marca de inicio en DSP
 
     private void Awake()
     {
         if (instance == null) instance = this;
-        else Destroy(gameObject);
+        else { Destroy(gameObject); return; }
 
-        targetInstrumentVolumes = new float[instrumentSources.Count];
+        // Asegura tamaños correctos aunque cambie la cantidad de instrumentos
+        int count = instrumentSources != null ? instrumentSources.Count : 0;
+        targetInstrumentVolumes = new float[count];
+        for (int i = 0; i < count; i++) targetInstrumentVolumes[i] = 0f;
     }
 
     private void Update()
     {
         // Suaviza el cambio de volumen de los instrumentos
+        if (instrumentSources == null) return;
         for (int i = 0; i < instrumentSources.Count; i++)
         {
-            instrumentSources[i].volume = Mathf.Lerp(instrumentSources[i].volume, targetInstrumentVolumes[i], Time.deltaTime * volumeFadeSpeed);
+            var src = instrumentSources[i];
+            if (src == null) continue;
+            src.volume = Mathf.Lerp(src.volume, targetInstrumentVolumes[i], Time.deltaTime * volumeFadeSpeed);
         }
     }
 
+    // ⚠️ Deja de reproducir aquí; solo asigna clips.
     public void SetupSong(SongChart song)
     {
-        backingTrackSource.clip = song.backingTrackClip;
-        for (int i = 0; i < instrumentSources.Count; i++)
+        if (song == null) return;
+
+        if (backingTrackSource != null)
+            backingTrackSource.clip = song.backingTrackClip;
+
+        int tracks = Mathf.Min(instrumentSources.Count, song.instrumentTracks.Count);
+        for (int i = 0; i < tracks; i++)
         {
-            if (i < song.instrumentTracks.Count)
-            {
-                instrumentSources[i].clip = song.instrumentTracks[i];
-                instrumentSources[i].Play();
-                targetInstrumentVolumes[i] = 0f; // Empezamos con todos los instrumentos silenciados
-            }
+            if (instrumentSources[i] == null) continue;
+            instrumentSources[i].clip = song.instrumentTracks[i];
+            instrumentSources[i].loop = false; // ajusta a tu gusto
+            targetInstrumentVolumes[i] = 0f;   // empieza silenciado
         }
-        backingTrackSource.Play();
     }
 
+    // 🔸 Arrancar TODO sincronizado en una misma marca de tiempo DSP
+    public void StartAllSynced(double leadTime = 0.1)
+    {
+        if (started) return;
+        startDspTime = AudioSettings.dspTime + leadTime;
+
+        if (backingTrackSource != null && backingTrackSource.clip != null)
+            backingTrackSource.PlayScheduled(startDspTime);
+
+        if (instrumentSources != null)
+        {
+            for (int i = 0; i < instrumentSources.Count; i++)
+            {
+                var src = instrumentSources[i];
+                if (src != null && src.clip != null)
+                    src.PlayScheduled(startDspTime);
+            }
+        }
+
+        started = true;
+    }
+
+    // 🔸 Detener TODO (para reiniciar limpio)
+    public void StopAllAudio()
+    {
+        if (backingTrackSource) backingTrackSource.Stop();
+        if (instrumentSources != null)
+        {
+            foreach (var s in instrumentSources) if (s) s.Stop();
+        }
+        started = false;
+    }
+
+    // 🔸 Pausar / Reanudar (para GameOver o Pausa)
+    public void PauseAll()
+    {
+        backingTrackSource?.Pause();
+        if (instrumentSources != null)
+            foreach (var s in instrumentSources) s?.Pause();
+    }
+
+    public void UnpauseAll()
+    {
+        backingTrackSource?.UnPause();
+        if (instrumentSources != null)
+            foreach (var s in instrumentSources) s?.UnPause();
+    }
+
+    // Interacción desde el gameplay
     public void HitNote(int laneID)
     {
-        if (laneID < targetInstrumentVolumes.Length)
-        {
+        if (laneID >= 0 && laneID < targetInstrumentVolumes.Length)
             targetInstrumentVolumes[laneID] = 1f;
-        }
     }
 
     public void MissNote(int laneID)
     {
-        if (laneID < targetInstrumentVolumes.Length)
-        {
+        if (laneID >= 0 && laneID < targetInstrumentVolumes.Length)
             targetInstrumentVolumes[laneID] = 0f;
-        }
     }
 
-    // --- NUEVA FUNCIÓN PARA EL SONIDO DE FALLO ---
     public void PlayMissSound()
     {
         if (sfxSource != null && missSoundClip != null)
-        {
             sfxSource.PlayOneShot(missSoundClip);
-        }
     }
 }
