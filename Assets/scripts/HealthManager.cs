@@ -61,7 +61,7 @@ public class HealthManager : MonoBehaviour
     if (currentHealth <= 0)
     {
         currentHealth = 0;
-        GameManager.instance.OnGameOver(); // 🔥 llama al GameOver
+        GameManager.instance.OnGameOver(); 
     }
 }
 }

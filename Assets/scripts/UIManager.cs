@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,9 +19,8 @@ public class UIManager : MonoBehaviour
     {
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
-        
 
-            scoreManager = FindFirstObjectByType<ScoreManager>();
+        scoreManager = FindFirstObjectByType<ScoreManager>();
     }
 
     public void ShowGameOverPanel(bool show)

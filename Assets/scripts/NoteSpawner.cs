@@ -16,6 +16,7 @@ public class NoteSpawner : MonoBehaviour
     private List<SongChart.NoteData> notes;
     private int nextNoteIndex = 0;
     private float startTime = 0;
+    private bool isSpawning = false;
 
     void Start()
     {
@@ -24,9 +25,10 @@ public class NoteSpawner : MonoBehaviour
 
     void InitializeSong()
     {
+        isSpawning = true;
         if (currentSong == null)
         {
-            Debug.LogError("ERROR: No hay un SongChart asignado en el NoteSpawner.");
+            print("ERROR: No hay un SongChart asignado en el NoteSpawner.");
             return;
         }
 
@@ -39,7 +41,7 @@ public class NoteSpawner : MonoBehaviour
 
     void Update()
     {
-        if (nextNoteIndex >= notes.Count)
+        if (isSpawning == false||nextNoteIndex >= notes.Count)
         {
             // No hay más notas que spawnear.
             return;
@@ -84,4 +86,25 @@ public class NoteSpawner : MonoBehaviour
             Debug.LogError($"ERROR: El prefab de nota para el carril {laneId} no tiene el script 'Nota_Movimiento'.");
         }
     }
+    //   Detiene el spawn de notas
+    public void StopSpawning()
+    {
+        print("aaaa parame");
+        isSpawning = false;
+    }
+
+    //  Reinicia los valores y vuelve a spawnear desde el inicio
+    public void ResetAndStart()
+    {
+        nextNoteIndex = 0;
+        startTime = (float)AudioSettings.dspTime;
+        isSpawning = true;
+    }
+
+    //  Inicia normalmente
+    public void StartSpawning()
+    {
+        isSpawning = true;
+    }
+
 }
