@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public InputManager inputManager;
     public bool isGameOver = false;
+    public NoteSpawner noteSpawner;
 
     void Awake()
     {
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     public void OnNoteHit(int laneID)
     {
         // Mensaje para confirmar que la llamada fue recibida
-        Debug.Log($"<color=#006400>GAME MANAGER: OnNoteHit RECIBIDO para carril {laneID}</color>");
+       // Debug.Log($"<color=#006400>GAME MANAGER: OnNoteHit RECIBIDO para carril {laneID}</color>");
 
         audioManager.HitNote(laneID);
         scoreManager.AddScore();
@@ -59,8 +60,6 @@ public class GameManager : MonoBehaviour
 
     public void OnNoteMiss(int laneID)
     {
-        // Mensaje para confirmar que la llamada fue recibida
-        //Debug.Log($"<color=#8B0000>GAME MANAGER: OnNoteMiss RECIBIDO para carril {laneID}</color>");
 
         audioManager.MissNote(laneID);
         audioManager.PlayMissSound();
@@ -82,6 +81,7 @@ public class GameManager : MonoBehaviour
         if(isGameOver)
             return;
         isGameOver = true;
+        noteSpawner?.StopSpawning();
         Time.timeScale = 0f;
         audioManager?.PauseAll();
         if (inputManager!= null)
@@ -99,19 +99,19 @@ public class GameManager : MonoBehaviour
         // 2. Reinicia lógica de juego
         scoreManager.currentScore = 0;
         scoreManager.currentCombo = 0;
+        uiManager?.UpdateScore(0);
         scoreManager.SetMultiplier(1);
+        healthManager.ResetHealth();   
+        powerUpManager.ResetPower();  
 
-        healthManager.ResetHealth();   // 🔧 Asegúrate de tener este método
-        powerUpManager.ResetPower();   // 🔧 También este
-
-        // 3. Elimina notas vivas (si no usas pool)
+        // 3. Elimina notas vivas 
         foreach (var note in GameObject.FindGameObjectsWithTag("Nota"))
             Destroy(note);
 
-        // 4. Reinicia música sincronizada
+        // 4. Reinicia música sincronizada y el spawner
         audioManager?.StopAllAudio();
         audioManager?.StartAllSynced();
-
+        noteSpawner?.ResetAndStart();
         // 5. Oculta panel y reactiva input
         uiManager?.ShowGameOverPanel(false);
         if (inputManager != null)

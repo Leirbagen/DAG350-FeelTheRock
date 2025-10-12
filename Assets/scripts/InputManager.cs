@@ -29,7 +29,7 @@ public class InputManager : MonoBehaviour
         }
 
         // --- ¡NUEVA LÓGICA PARA ACTIVAR EL PODER! ---
-        if (Input.GetKeyDown(powerUpKey))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // Le pedimos al PowerUpManager que intente activarse.
             GameManager.instance.powerUpManager.TryActivatePowerUp();

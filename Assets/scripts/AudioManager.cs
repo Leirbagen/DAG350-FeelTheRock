@@ -84,7 +84,7 @@ public class AudioManager : MonoBehaviour
         started = true;
     }
 
-    // 🔸 Detener TODO (para reiniciar limpio)
+    //  Detener TODO (para reiniciar limpio)
     public void StopAllAudio()
     {
         if (backingTrackSource) backingTrackSource.Stop();
@@ -95,10 +95,13 @@ public class AudioManager : MonoBehaviour
         started = false;
     }
 
-    // 🔸 Pausar / Reanudar (para GameOver o Pausa)
+    //  Pausar / Reanudar (para GameOver o Pausa)
     public void PauseAll()
     {
-        backingTrackSource?.Pause();
+        if(backingTrackSource != null)
+        {
+            backingTrackSource?.Pause();
+        }
         if (instrumentSources != null)
             foreach (var s in instrumentSources) s?.Pause();
     }

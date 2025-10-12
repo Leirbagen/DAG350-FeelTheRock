@@ -4,9 +4,12 @@ using UnityEngine;
 public class PowerUpManager : MonoBehaviour
 {
     [Header("Configuración del Poder")]
-    public int comboToFill = 20;
+    [SerializeField] public int comboToFill = 10;
     public int powerUpMultiplier = 2;
-    public float powerUpDuration = 10f;
+    public int incrementadorPorLLenado = 2;
+    public int maxMultiplier = 0;
+    public ScoreManager scoreManager;
+    public UIManager uiManager;
 
     [Header("Estado Actual (Solo para Debug)")]
     [SerializeField] public int currentPowerUpValue = 0;
@@ -15,72 +18,90 @@ public class PowerUpManager : MonoBehaviour
 
     public void OnNoteHit(int currentCombo)
     {
-        // Solo llenamos la barra si el poder no está listo y no está activo
-        if (!isReady && !isActive)
+        if (!isActive)
         {
-            currentPowerUpValue = currentCombo;
-            GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
+            // Antes de activar: usa el COMBO global para llenar la barra
+            currentPowerUpValue = Mathf.Clamp(currentCombo, 0, comboToFill);
+            uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
 
             if (currentPowerUpValue >= comboToFill)
-            {
-                isReady = true;
-                // Opcional: añadir un sonido o efecto para avisar que está listo
-            }
+                isReady = true; // listo para activar por primera vez
+        }
+        else
+        {
+            // Ya activo: llenamos por hits para permitir stacking
+            currentPowerUpValue = Mathf.Min(currentPowerUpValue + 1, comboToFill);
+            uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
+
+            if (currentPowerUpValue >= comboToFill)
+                stackMultiplier(); // x2 -> x4 -> x6...
         }
     }
 
     public void ResetPower()
     {
-        currentPowerUpValue = 0;
-        isReady = false;
         isActive = false;
-        GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
+        isReady = false;
+        currentPowerUpValue = 0;
+        
+        scoreManager.SetMultiplier(1);
+        uiManager?.UpdateMultiplier(1);
+        if (uiManager?.multiplierText) uiManager.multiplierText.gameObject.SetActive(false);
+        uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
     }
 
     public void OnNoteMiss()
     {
-        // Si fallamos mientras llenamos la barra (y no está activo), la vaciamos
-        if (!isActive)
+        if (isActive)
         {
-            currentPowerUpValue = 0;
-            isReady = false;
-            GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
+            isActive = false;
+            scoreManager.SetMultiplier(1);
+            uiManager?.UpdateMultiplier(1);
+            if(uiManager?.multiplierText)
+                uiManager.multiplierText.gameObject.SetActive(false);
         }
+
+        currentPowerUpValue = 0;
+        isReady = false;
+        uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
     }
 
-    // --- ¡NUEVA FUNCIÓN PARA ACTIVAR EL PODER! ---
     public void TryActivatePowerUp()
     {
         if (isReady && !isActive)
         {
             isReady = false;
-            StartCoroutine(PowerUpSequence());
+            activarPowerUp();
         }
     }
 
-    public IEnumerator PowerUpSequence()
+
+    public void activarPowerUp()
     {
         isActive = true;
-
-        // Le decimos al GameManager que aplique el multiplicador
-        GameManager.instance.OnMultiplierChanged(powerUpMultiplier);
-        
-        // Aquí puedes añadir la lógica para cambiar el color de las notas
-        // Ejemplo: NoteSpawner.instance.ActivatePowerUpMode(true);
-
-        // Vaciamos la barra en la UI
+        //primer multiplicador minimo es 2
+        int first = Mathf.Max(powerUpMultiplier,2);
+        scoreManager.SetMultiplier(first);
+        uiManager?.UpdateMultiplier(first);
+        if(uiManager?.multiplierText)
+            uiManager.multiplierText.gameObject.SetActive(true);
+        //se reinicia la barra para poder volver a llenarla  y activar el otro multiplicador
         currentPowerUpValue = 0;
-        GameManager.instance.uiManager.UpdatePowerUp(currentPowerUpValue, comboToFill);
-        
-        // Esperamos la duración del poder
-        yield return new WaitForSeconds(powerUpDuration);
+        uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
 
-        // Le decimos al GameManager que vuelva al multiplicador normal
-        GameManager.instance.OnMultiplierChanged(1);
-        
-        // Aquí desactivaríamos el modo de cambio de color de notas
-        // Ejemplo: NoteSpawner.instance.ActivatePowerUpMode(false);
-        
-        isActive = false;
+    }
+
+    public void stackMultiplier()
+    {
+        int next = scoreManager.currentMultiplier + Mathf.Max(1, incrementadorPorLLenado);
+        if (maxMultiplier > 0) next = Mathf.Min(next, maxMultiplier);
+
+        scoreManager.SetMultiplier(next);
+        uiManager?.UpdateMultiplier(next);
+
+        // Reinicia barra para seguir apilando
+        currentPowerUpValue = 0;
+        uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
+        // (Opcional) feedback/animación aquí
     }
 }
