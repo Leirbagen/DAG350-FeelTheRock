@@ -3,63 +3,42 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Audio Sources")]
-    public List<AudioSource> instrumentSources;
-    public AudioSource backingTrackSource;
-    public AudioSource sfxSource;
-
-    [Header("Audio Clips")]
-    public AudioClip missSoundClip;
-
-    [Header("Configuración de Volumen")]
-    public float volumeFadeSpeed = 10f;
-    private float[] targetInstrumentVolumes;
-
     public static AudioManager instance;
 
-    // 🔹 Estado de reproducción sincronizada
+    [Header("Audio Sources")]
+    //nueva jugabilidad
+    public AudioSource instrumentalSource; //Instrumental general
+    public AudioSource backingTrackSource; //voces
+
+    [Header("SFX")]
+    public AudioSource sfxSource;
+    public AudioClip missSoundClip;
+    //arranque sincronizado
     private bool started = false;
-    private double startDspTime; // marca de inicio en DSP
+    private double startDspTime;
+  
+
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else { Destroy(gameObject); return; }
-
-        // Asegura tamaños correctos aunque cambie la cantidad de instrumentos
-        int count = instrumentSources != null ? instrumentSources.Count : 0;
-        targetInstrumentVolumes = new float[count];
-        for (int i = 0; i < count; i++) targetInstrumentVolumes[i] = 0f;
     }
 
     private void Update()
     {
-        // Suaviza el cambio de volumen de los instrumentos
-        if (instrumentSources == null) return;
-        for (int i = 0; i < instrumentSources.Count; i++)
-        {
-            var src = instrumentSources[i];
-            if (src == null) continue;
-            src.volume = Mathf.Lerp(src.volume, targetInstrumentVolumes[i], Time.deltaTime * volumeFadeSpeed);
-        }
+      
     }
 
-    // ⚠️ Deja de reproducir aquí; solo asigna clips.
+    //  Deja de reproducir aquí; solo asigna clips.
     public void SetupSong(SongChart song)
     {
         if (song == null) return;
-
-        if (backingTrackSource != null)
-            backingTrackSource.clip = song.backingTrackClip;
-
-        int tracks = Mathf.Min(instrumentSources.Count, song.instrumentTracks.Count);
-        for (int i = 0; i < tracks; i++)
-        {
-            if (instrumentSources[i] == null) continue;
-            instrumentSources[i].clip = song.instrumentTracks[i];
-            instrumentSources[i].loop = false; // ajusta a tu gusto
-            targetInstrumentVolumes[i] = 0f;   // empieza silenciado
-        }
+        if (backingTrackSource) backingTrackSource.clip = song.backingTrackClip;
+        if (instrumentalSource) instrumentalSource.clip = song.instrumentalClip; // [NUEVO]
+        if (backingTrackSource) backingTrackSource.loop = false;
+        if (instrumentalSource) instrumentalSource.loop = false;
+        started = false;
     }
 
     // 🔸 Arrancar TODO sincronizado en una misma marca de tiempo DSP
@@ -68,18 +47,11 @@ public class AudioManager : MonoBehaviour
         if (started) return;
         startDspTime = AudioSettings.dspTime + leadTime;
 
-        if (backingTrackSource != null && backingTrackSource.clip != null)
+        if (backingTrackSource && backingTrackSource.clip)
             backingTrackSource.PlayScheduled(startDspTime);
 
-        if (instrumentSources != null)
-        {
-            for (int i = 0; i < instrumentSources.Count; i++)
-            {
-                var src = instrumentSources[i];
-                if (src != null && src.clip != null)
-                    src.PlayScheduled(startDspTime);
-            }
-        }
+        if (instrumentalSource && instrumentalSource.clip)
+            instrumentalSource.PlayScheduled(startDspTime);
 
         started = true;
     }
@@ -87,43 +59,37 @@ public class AudioManager : MonoBehaviour
     //  Detener TODO (para reiniciar limpio)
     public void StopAllAudio()
     {
-        if (backingTrackSource) backingTrackSource.Stop();
-        if (instrumentSources != null)
-        {
-            foreach (var s in instrumentSources) if (s) s.Stop();
-        }
+        backingTrackSource?.Stop();
+        instrumentalSource?.Stop();
         started = false;
     }
 
     //  Pausar / Reanudar (para GameOver o Pausa)
     public void PauseAll()
     {
-        if(backingTrackSource != null)
-        {
-            backingTrackSource?.Pause();
-        }
-        if (instrumentSources != null)
-            foreach (var s in instrumentSources) s?.Pause();
+        backingTrackSource?.Pause();
+        instrumentalSource?.Pause();
     }
 
     public void UnpauseAll()
     {
         backingTrackSource?.UnPause();
-        if (instrumentSources != null)
-            foreach (var s in instrumentSources) s?.UnPause();
+        instrumentalSource?.UnPause();
     }
 
-    // Interacción desde el gameplay
     public void HitNote(int laneID)
     {
-        if (laneID >= 0 && laneID < targetInstrumentVolumes.Length)
-            targetInstrumentVolumes[laneID] = 1f;
+        // Ya no se maneja volumen por lane.
+        // Aquí puedes poner un efecto o SFX de acierto.
+        // Ejemplo opcional:
+        // sfxSource?.PlayOneShot(hitSoundClip);
     }
 
     public void MissNote(int laneID)
     {
-        if (laneID >= 0 && laneID < targetInstrumentVolumes.Length)
-            targetInstrumentVolumes[laneID] = 0f;
+        // Antes bajaba el volumen del instrumento del lane.
+        // Ahora podrías aplicar un filtro temporal, o simplemente:
+        PlayMissSound(); // mantiene el feedback de error
     }
 
     public void PlayMissSound()
@@ -131,4 +97,11 @@ public class AudioManager : MonoBehaviour
         if (sfxSource != null && missSoundClip != null)
             sfxSource.PlayOneShot(missSoundClip);
     }
+
+    public float GetSongDspTime()
+    {
+        if (!started) return 0f;
+        return (float)(AudioSettings.dspTime - startDspTime);
+    }
+
 }
