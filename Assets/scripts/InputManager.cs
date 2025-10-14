@@ -6,9 +6,23 @@ public class InputManager : MonoBehaviour
     [Header("Configuración de Teclas")]
     public KeyCode[] inputKeys;
     public KeyCode powerUpKey = KeyCode.Space; // Tecla para activar el poder
+    [SerializeField] Animator animatorBtn1;
+    [SerializeField] Animator animatorBtn2;
+    [SerializeField] Animator animatorBtn3;
+    [SerializeField] Animator animatorBtn4;
+
 
     [Header("Referencias a Detectores")]
     public List<Detector> detectors;
+
+
+    public void ControlarAnimaciones()
+    {
+        if (Input.GetKeyDown(inputKeys[0])) animatorBtn1.SetTrigger("press");
+        if (Input.GetKeyDown(inputKeys[1])) animatorBtn2.SetTrigger("press2");
+        if (Input.GetKeyDown(inputKeys[2])) animatorBtn3.SetTrigger("press3");
+        if (Input.GetKeyDown(inputKeys[3])) animatorBtn4.SetTrigger("press4");
+    }
 
     void Update()
     {
@@ -27,6 +41,8 @@ public class InputManager : MonoBehaviour
                 }
             }
         }
+        
+        ControlarAnimaciones();
 
         // --- ¡NUEVA LÓGICA PARA ACTIVAR EL PODER! ---
         if (Input.GetKeyDown(KeyCode.Space))
@@ -34,5 +50,7 @@ public class InputManager : MonoBehaviour
             // Le pedimos al PowerUpManager que intente activarse.
             GameManager.instance.powerUpManager.TryActivatePowerUp();
         }
+
+       
     }
 }

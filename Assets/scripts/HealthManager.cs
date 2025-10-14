@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
     public int healComboThreshold = 3; // Cada cuántas notas seguidas se cura
     private int comboCounterForHealing = 0;
 
-    void Start()
+    private void Awake()
     {
         currentHealth = maxHealth;
     }

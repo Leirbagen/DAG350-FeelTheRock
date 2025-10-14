@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public InputManager inputManager;
     public bool isGameOver = false;
     public NoteSpawner noteSpawner;
+    [SerializeField] private AudioSource sfxSource;  
+    [SerializeField] private AudioClip gameOverClip;  
+    [SerializeField] private float gameOverVolume = 1f;
+
 
     void Awake()
     {
@@ -78,10 +82,13 @@ public class GameManager : MonoBehaviour
     
     public void OnGameOver()
     {
+
         if(isGameOver)
             return;
         isGameOver = true;
         noteSpawner?.StopSpawning();
+        if (sfxSource && gameOverClip)
+            sfxSource.PlayOneShot(gameOverClip, gameOverVolume);
         Time.timeScale = 0f;
         audioManager?.PauseAll();
         if (inputManager!= null)
@@ -130,5 +137,10 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
         uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
         uiManager.UpdateCombo(scoreManager.currentCombo);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Niveles60");
     }
 }

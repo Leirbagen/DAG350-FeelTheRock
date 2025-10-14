@@ -73,9 +73,7 @@ public class UIManager : MonoBehaviour
         {
             float healthValue = (float)currentHealth / maxHealth;
             healthBar.value = healthValue;
-            
-            // --- MENSAJE DE DIAGNÓSTICO ---
-            //Debug.Log($"<color=cyan>UI MANAGER: Actualizando HealthBar. currentHealth={currentHealth}, maxHealth={maxHealth}. Valor final: {healthValue}</color>");
+
         }
     }
 
