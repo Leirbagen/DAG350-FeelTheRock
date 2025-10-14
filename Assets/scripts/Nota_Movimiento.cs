@@ -7,17 +7,19 @@ public class Nota_Movimiento : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     private float fallTime;
+    public int LaneID;
     //variable para evitar doble conteo entre el hit y el miss
     private bool judged = false;
 
     private float timeElapsed = 0f;
 
-    public void Initialize(Vector3 start, Vector3 end, float time)
+    public void Initialize(Vector3 start, Vector3 end, float time, int laneID)
     {
         startPos = start;
         endPos = end;
         fallTime = time;
         judged = false;
+        LaneID = laneID;
     }
     public void MarkAsHit()
     {

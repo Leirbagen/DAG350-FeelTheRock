@@ -1,22 +1,23 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "NuevoMapaDeCancion", menuName = "Juego de Ritmo/Nuevo Mapa de Canción")]
+[CreateAssetMenu(fileName = "Nuevo Mapa de cancion", menuName = "Juego de Ritmo/ SongChart")]
 public class SongChart : ScriptableObject
 {
-    [Header("Archivos de Audio")]
+    [Header("Archivos de Audiossss")]
     public AudioClip backingTrackClip;
-    public List<AudioClip> instrumentTracks;
+    [FormerlySerializedAs("Instrument Tracks")]
+    public AudioClip instrumentalClip;
 
     // Esta es la "plantilla" de la nota que el NoteSpawner necesita.
     [System.Serializable]
     public class NoteData
     {
-        public float spawnTime;
-        public int laneID;
-        // La duración ya no es necesaria.
+        public float spawnTime; //segundos
+        public int laneID; // los botones: 0,1,2,3....n
     }
 
     [Header("Mapa de Notas")]
-    public List<NoteData> notes;
+    public List<NoteData> notes = new List<NoteData>();
 }

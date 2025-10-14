@@ -18,13 +18,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverClip;  
     [SerializeField] private float gameOverVolume = 1f;
 
+    public SongChart song;
+
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            //Debug.Log("<color=purple>GAME MANAGER: Instancia creada correctamente.</color>");
         }
         else
         {
@@ -36,11 +37,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (uiManager == null || scoreManager == null || healthManager == null || powerUpManager == null || audioManager == null)
-        {
-            //Debug.LogError("ERROR: Faltan referencias de Managers en el GameManager! Arrástralos en el Inspector.");
-            return;
-        }
+        // [NUEVO] Preparar audio y spawner
+        if (audioManager != null && song != null)
+            audioManager.SetupSong(song);
+
+        if (noteSpawner != null && song != null)
+            noteSpawner.currentSong = song;
+
+        StartRun();
 
         uiManager.UpdateScore(scoreManager.currentScore);
         uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
@@ -49,10 +53,21 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateMultiplier(scoreManager.currentMultiplier);
     }
 
+    public void StartRun()
+    {
+        if (audioManager != null) audioManager.StartAllSynced(0.2);
+        if (noteSpawner != null) noteSpawner.ResetAndStart();
+
+        // Mantienes tus resets de score/vida/UI si corresponde
+        //scoreManager?.ResetScore();
+        healthManager?.ResetHealth();
+        powerUpManager?.ResetPower();
+        UpdateAllUI();
+        isGameOver = false;
+    }
+
     public void OnNoteHit(int laneID)
     {
-        // Mensaje para confirmar que la llamada fue recibida
-       // Debug.Log($"<color=#006400>GAME MANAGER: OnNoteHit RECIBIDO para carril {laneID}</color>");
 
         audioManager.HitNote(laneID);
         scoreManager.AddScore();
@@ -131,7 +146,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    private void UpdateAllUI()
+    public void UpdateAllUI()
     {
         uiManager.UpdateScore(scoreManager.currentScore);
         uiManager.UpdateHealth(healthManager.currentHealth, healthManager.maxHealth);
