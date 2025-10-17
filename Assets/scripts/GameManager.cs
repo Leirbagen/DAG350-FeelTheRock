@@ -1,10 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    public VideoPlayer gameOver;
     [Header("Referencias a Managers (Arrastrar desde la Jerarquía)")]
     public ScoreManager scoreManager;
     public HealthManager healthManager;
@@ -13,6 +15,7 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public InputManager inputManager;
     public bool isGameOver = false;
+    public bool isPaused = false;
     public NoteSpawner noteSpawner;
     [SerializeField] private AudioSource sfxSource;  
     [SerializeField] private AudioClip gameOverClip;  
@@ -51,6 +54,25 @@ public class GameManager : MonoBehaviour
         uiManager.UpdatePowerUp(powerUpManager.currentPowerUpValue, powerUpManager.comboToFill);
         uiManager.UpdateCombo(scoreManager.currentCombo);
         uiManager.UpdateMultiplier(scoreManager.currentMultiplier);
+    }
+
+    public void Pausa()
+    {
+        if(isPaused) return;
+        isPaused = true;
+        uiManager?.ShowPausePanel(true);
+        audioManager?.PauseAll();
+        noteSpawner?.StopSpawning();
+        Time.timeScale = 0f;
+    }
+
+    public void UnPause() {
+        if(!isPaused) return;
+        isPaused = false;
+        uiManager?.ShowPausePanel(false);
+        audioManager?.UnpauseAll();
+        noteSpawner?.StartSpawning();
+        Time.timeScale = 1f;
     }
 
     public void StartRun()
@@ -111,9 +133,11 @@ public class GameManager : MonoBehaviour
 
         // 3. Muestra el panel de Game Over
         uiManager?.ShowGameOverPanel(true);
+        gameOver.Play();
     }
     public void RestartRun()
     {
+        gameOver.Stop();
         // 1. Reactiva tiempo y limpia flags
         Time.timeScale = 1f;
         isGameOver = false;
@@ -157,5 +181,14 @@ public class GameManager : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene("Niveles60");
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pausa();
+        }
+            
     }
 }

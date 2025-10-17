@@ -11,10 +11,18 @@ public class NoteSpawner : MonoBehaviour
     public Transform[] laneStartPositions;
     public Transform[] laneEndPositions;
 
-    private int nextNoteIndex = 0;
+    public int nextNoteIndex;
     private bool isSpawning = false;
     public AudioManager audioManager;
+    private float spawnerAnchorTime = 0;
+    List<GameObject> alive= new();
+    IReadOnlyList<SongChart.NoteData> notes;
 
+
+    private void Start()
+    {
+        nextNoteIndex = 0;
+    }
     private void Awake()
     {
         audioManager = AudioManager.instance;
@@ -26,14 +34,15 @@ public class NoteSpawner : MonoBehaviour
         if (!isSpawning || currentSong == null || currentSong.notes == null || currentSong.notes.Count == 0)
             return;
 
-        float songTime = audioManager != null ? audioManager.GetSongDspTime() : Time.time;
+        float songTimeAbsolute = audioManager != null ? audioManager.GetSongDspTime() : Time.time;
+        float sontTimeRelative = songTimeAbsolute - spawnerAnchorTime;
 
         while (nextNoteIndex < currentSong.notes.Count)
         {
             var n = currentSong.notes[nextNoteIndex];
 
             // [MOD] Lanzar con antelación fallTime para llegar justo en spawnTime al detector
-            if (songTime >= (n.spawnTime - fallTime))
+            if (sontTimeRelative >= (n.spawnTime - fallTime))
             {
                 SpawnNote(n);
                 nextNoteIndex++;
@@ -53,9 +62,35 @@ public class NoteSpawner : MonoBehaviour
         var prefab = notePrefabs[lane];
 
         var go = Instantiate(prefab, start, Quaternion.identity);
+        alive.Add(go);
         var movimiento = go.GetComponent<Nota_Movimiento>();
         movimiento.Initialize(start, end, fallTime, noteData.laneID);
     }
+
+    //resetea el chart
+    public void ResetChartOnly(bool despawnNotes)
+    {
+        print ("reseteando chart");
+        //  Reinicia índice
+        nextNoteIndex = 0;
+
+
+        if(audioManager != null)
+            spawnerAnchorTime = (float)audioManager.GetSongDspTime();
+        else
+            spawnerAnchorTime = Time.time;
+
+        // Limpia notas vivas para que no se acumulen
+        if (despawnNotes)
+        {
+            for (int i = alive.Count - 1; i >= 0; i--)
+            {
+                if (alive[i] != null) Destroy(alive[i]);
+            }
+        }
+        alive.Clear();
+    }
+
     //   Detiene el spawn de notas
     public void StopSpawning()
     {
@@ -66,7 +101,7 @@ public class NoteSpawner : MonoBehaviour
     //  Reinicia los valores y vuelve a spawnear desde el inicio
     public void ResetAndStart()
     {
-        nextNoteIndex = 0;
+        ResetChartOnly(true);
         isSpawning = true;
     }
 

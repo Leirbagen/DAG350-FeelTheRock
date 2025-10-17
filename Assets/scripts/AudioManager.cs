@@ -16,7 +16,10 @@ public class AudioManager : MonoBehaviour
     //arranque sincronizado
     private bool started = false;
     private double startDspTime;
-  
+    double pausedDspTime;
+    double pauseSAcumulado;
+    bool isPause;
+
 
 
     private void Awake()
@@ -45,6 +48,7 @@ public class AudioManager : MonoBehaviour
     public void StartAllSynced(double leadTime = 0.1)
     {
         if (started) return;
+        pauseSAcumulado = 0;
         startDspTime = AudioSettings.dspTime + leadTime;
 
         if (backingTrackSource && backingTrackSource.clip)
@@ -67,12 +71,14 @@ public class AudioManager : MonoBehaviour
     //  Pausar / Reanudar (para GameOver o Pausa)
     public void PauseAll()
     {
+        pausedDspTime = AudioSettings.dspTime;
         backingTrackSource?.Pause();
         instrumentalSource?.Pause();
     }
 
     public void UnpauseAll()
     {
+        pauseSAcumulado += AudioSettings.dspTime - pausedDspTime;
         backingTrackSource?.UnPause();
         instrumentalSource?.UnPause();
     }
@@ -101,7 +107,8 @@ public class AudioManager : MonoBehaviour
     public float GetSongDspTime()
     {
         if (!started) return 0f;
-        return (float)(AudioSettings.dspTime - startDspTime);
+        double now = AudioSettings.dspTime;
+        return (float)((now - startDspTime) - pauseSAcumulado);
     }
 
 }

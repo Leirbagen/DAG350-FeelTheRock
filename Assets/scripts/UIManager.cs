@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("Referencias de la Interfaz")]
     public GameObject gameOverPanel;
+    public GameObject pausePanel;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI comboText;
     public TextMeshProUGUI multiplierText;
@@ -28,7 +29,11 @@ public class UIManager : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(show);
     }
-
+    public void ShowPausePanel(bool show)
+    {
+        if (pausePanel != null)
+            pausePanel.SetActive(show);
+    }
     public void UpdateScore(int score)
     {
         if (scoreText != null)
