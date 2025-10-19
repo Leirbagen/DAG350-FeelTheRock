@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7339585286277800294}
   - component: {fileID: 1479714750494843913}
   - component: {fileID: -8508607043953993898}
+  - component: {fileID: 809064641620840365}
   m_Layer: 0
   m_Name: NotaAmarilla_Prefab
   m_TagString: Nota
@@ -83,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -641757113173221368, guid: 13eb8ade1b8a8fb428c0266c5c8210ab, type: 3}
+  m_Sprite: {fileID: -641757113173221368, guid: 744e6a35f534ec74f87bfa420487b1e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.69, y: 2.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -119,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5451efe1048fd5842bdba6df7f22b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nota_Movimiento
+  LaneID: 0
+  judged: 0
 --- !u!50 &1479714750494843913
 Rigidbody2D:
   serializedVersion: 5
@@ -182,3 +185,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.09918618, y: -0.74389607}
   m_Radius: 0.49212104
+--- !u!95 &809064641620840365
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877851483003893389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b76a90eb3fd6b7c42b984366f64eab41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
