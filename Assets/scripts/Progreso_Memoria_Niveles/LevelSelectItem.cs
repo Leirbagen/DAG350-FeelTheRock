@@ -9,7 +9,6 @@ public class LevelSelectItem : MonoBehaviour
     public string sceneName;          // nombre exacto de la escena de este nivel
 
     [Header("UI")]
-    public TextMeshProUGUI titleText;
     public TextMeshProUGUI scoreText;
     public StarUI starUI;
     public Button playButton;
@@ -23,7 +22,6 @@ public class LevelSelectItem : MonoBehaviour
         int bestScore = GameProgress.Instance.GetBestScore(levelId);
         int bestStars = GameProgress.Instance.GetBestStars(levelId);
 
-        if (titleText) titleText.text = string.IsNullOrEmpty(chart.songName) ? levelId : chart.songName;
         if (scoreText) scoreText.text = $"Puntaje: {bestScore}";
         if (starUI) starUI.SetStars(bestStars);
 

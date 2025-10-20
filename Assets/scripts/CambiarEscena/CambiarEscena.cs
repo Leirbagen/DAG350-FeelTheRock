@@ -2,12 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class SpriteClickCambiaEscena : MonoBehaviour, IPointerClickHandler
+public class SpriteClickCambiaEscena : MonoBehaviour
 {
-    public string nombreEscena;
-
-    public void OnPointerClick(PointerEventData eventData)
+    public void CambiarEscena(string nombre)
     {
-        SceneManager.LoadScene(nombreEscena);
+        SceneManager.LoadScene(nombre);
     }
 }

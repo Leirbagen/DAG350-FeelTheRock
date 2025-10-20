@@ -25,7 +25,7 @@ public class MenuNiveles60 : MonoBehaviour
 
     public void Atras()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MenuDecadas");
     }
 
     // Update is called once per frame
