@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NIveles60/NivelTheBeatles/TheBeatles_LetItBe.unity
     guid: 169d642378cdb08488902e07a2b21bb7
+  - enabled: 1
+    path: Assets/Scenes/NIveles60/NivelTheDoors/TheDoors.unity
+    guid: 0d71befa9fe7f2b4f99e5dad018ba6fb
+  - enabled: 1
+    path: Assets/Scenes/NIveles60/NivelTheRollingStones/TheRollingStones.unity
+    guid: 142fb899999707649b78516e88ef1bec
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

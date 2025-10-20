@@ -947,9 +947,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1981066370}
+  - {fileID: 2037790465}
   - {fileID: 1443314614}
   - {fileID: 456505511}
-  - {fileID: 2037790465}
   m_Father: {fileID: 943236366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -969,8 +969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: f7f6d999794209f4299cf959e4eaa2a4, type: 2}
-  sceneName: 
+  chart: {fileID: 11400000, guid: 46b4a14fc331d924695f4b76352799c1, type: 2}
+  sceneName: TheRollingStones
   scoreText: {fileID: 1443314615}
   starUI: {fileID: 456505512}
   playButton: {fileID: 2037790466}
@@ -2081,9 +2081,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 368650706}
+  - {fileID: 202621204}
   - {fileID: 1174623733}
   - {fileID: 1834199797}
-  - {fileID: 202621204}
   m_Father: {fileID: 943236366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2104,7 +2104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
   chart: {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
-  sceneName: 
+  sceneName: TheDoors
   scoreText: {fileID: 1174623734}
   starUI: {fileID: 1834199798}
   playButton: {fileID: 202621205}

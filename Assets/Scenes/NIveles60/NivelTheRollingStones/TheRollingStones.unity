@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.81
       objectReference: {fileID: 0}
+    - target: {fileID: 1819673858761103654, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 38120b1cc8d372744a161b0d2b679f4e, type: 3}
+    - target: {fileID: 1845331061422722389, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cc74eaf66cb8114a942f6afaf5e4ab1, type: 3}
     - target: {fileID: 6327789464905356881, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -182,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: song
       value: 
-      objectReference: {fileID: 11400000, guid: f7f6d999794209f4299cf959e4eaa2a4, type: 2}
+      objectReference: {fileID: 11400000, guid: 46b4a14fc331d924695f4b76352799c1, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
