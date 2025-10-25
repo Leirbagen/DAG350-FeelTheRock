@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
@@ -10,12 +11,15 @@ public class PowerUpManager : MonoBehaviour
     public int maxMultiplier = 0;
     public ScoreManager scoreManager;
     public UIManager uiManager;
+    public List<Nota> notasList;
+    public Sprite poder;
 
     [Header("Estado Actual (Solo para Debug)")]
     [SerializeField] public int currentPowerUpValue = 0;
     [SerializeField] private bool isReady = false;
     [SerializeField] private bool isActive = false;
 
+    
     public void OnNoteHit(int currentCombo)
     {
         if (!isActive)
@@ -78,6 +82,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void activarPowerUp()
     {
+        notas.poderActivado(poder);
         isActive = true;
         //primer multiplicador minimo es 2
         int first = Mathf.Max(powerUpMultiplier,2);

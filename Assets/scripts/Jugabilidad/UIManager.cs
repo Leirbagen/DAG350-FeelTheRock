@@ -106,11 +106,11 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         if (scoreText != null)
-            scoreText.text = "Puntaje: " + score;
+            scoreText.text = "PUNTAJE: " + score;
         if (scoreTextPause != null)
-            scoreTextPause.text = "Puntaje Actual: " + score;
+            scoreTextPause.text = "PUNTAJE ACTUAL: " + score;
         if (scoreTextFinish != null)   
-            scoreTextFinish.text = "Puntaje Final: " + score;
+            scoreTextFinish.text = "PUNTAJE FINAL: " + score;
     }
 
     public void UpdateCombo(int combo)
@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour
             if (combo >= scoreManager.comboToShowThreshold)
             {
                 comboText.gameObject.SetActive(true);
-                comboText.text = "Combo x" + combo;
+                comboText.text = "COMBO X" + combo;
             }
             else
             {
@@ -136,7 +136,7 @@ public class UIManager : MonoBehaviour
             if (multiplier > 1)
             {
                 multiplierText.gameObject.SetActive(true);
-                multiplierText.text = "x" + multiplier;
+                multiplierText.text = "X" + multiplier;
             }
             else
             {

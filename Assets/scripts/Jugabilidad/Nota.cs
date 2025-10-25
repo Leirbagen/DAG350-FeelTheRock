@@ -5,6 +5,7 @@ public class Nota : MonoBehaviour
 {
     [Header("Configuración de la Nota")]
     public int laneID;
+    public PowerUpManager powerUpManager;
 
     // Ya no necesitamos 'duration', 'isCompleted', 'head', 'tail', etc.
 
@@ -13,5 +14,9 @@ public class Nota : MonoBehaviour
     {
         // Inmediatamente destruimos el objeto de la nota al ser tocada.
         Destroy(gameObject);
+    }
+    public void poderActivado(Sprite poder)
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = poder;
     }
 }
