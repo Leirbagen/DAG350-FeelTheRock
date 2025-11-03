@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class PowerUpManager : MonoBehaviour
 {
     [Header("Configuración del Poder")]
     [SerializeField] public int comboToFill = 10;
+    public event Action<bool> OnPowerChanged; // <<< true=ON, false=OFF
     public int powerUpMultiplier = 2;
     public int incrementadorPorLLenado = 2;
     public int maxMultiplier = 0;
@@ -17,7 +19,7 @@ public class PowerUpManager : MonoBehaviour
     [Header("Estado Actual (Solo para Debug)")]
     [SerializeField] public int currentPowerUpValue = 0;
     [SerializeField] private bool isReady = false;
-    [SerializeField] private bool isActive = false;
+    [SerializeField] public bool isActive = false;
 
     
     public void OnNoteHit(int currentCombo)
@@ -45,6 +47,7 @@ public class PowerUpManager : MonoBehaviour
     public void ResetPower()
     {
         isActive = false;
+        OnPowerChanged?.Invoke(false); // <<< OFF
         isReady = false;
         currentPowerUpValue = 0;
         
@@ -59,6 +62,7 @@ public class PowerUpManager : MonoBehaviour
         if (isActive)
         {
             isActive = false;
+            OnPowerChanged?.Invoke(false); // <<< OFF
             scoreManager.SetMultiplier(1);
             uiManager?.UpdateMultiplier(1);
             if(uiManager?.multiplierText)
@@ -82,8 +86,8 @@ public class PowerUpManager : MonoBehaviour
 
     public void activarPowerUp()
     {
-        notas.poderActivado(poder);
         isActive = true;
+        OnPowerChanged?.Invoke(true); // <<< ON
         //primer multiplicador minimo es 2
         int first = Mathf.Max(powerUpMultiplier,2);
         scoreManager.SetMultiplier(first);

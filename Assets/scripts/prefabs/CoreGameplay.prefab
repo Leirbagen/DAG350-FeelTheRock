@@ -4775,6 +4775,8 @@ MonoBehaviour:
   maxMultiplier: 0
   scoreManager: {fileID: 7530428830438730494}
   uiManager: {fileID: 8884274941913159443}
+  notasList: []
+  poder: {fileID: 0}
   currentPowerUpValue: 0
   isReady: 0
   isActive: 0
@@ -7383,7 +7385,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -12.942776, y: -22.687431, z: -265.41415, w: -67.87493}
+  m_margin: {x: -76.08036, y: -22.687431, z: -501.67142, w: -139.1594}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
