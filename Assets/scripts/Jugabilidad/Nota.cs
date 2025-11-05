@@ -29,7 +29,7 @@ public class Nota : MonoBehaviour
         if (powerUpManager != null)
         {
             powerUpManager.OnPowerChanged += ApplySkin;
-            ApplySkin(powerUpManager.isActive);
+            ApplySkin(powerUpManager.isActivo);
         }
     }
 

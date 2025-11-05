@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour
             if (combo >= scoreManager.comboToShowThreshold)
             {
                 comboText.gameObject.SetActive(true);
-                comboText.text = "COMBO X" + combo;
+                comboText.text = ""+combo;
             }
             else
             {

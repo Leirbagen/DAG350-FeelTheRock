@@ -13,18 +13,20 @@ public class PowerUpManager : MonoBehaviour
     public int maxMultiplier = 0;
     public ScoreManager scoreManager;
     public UIManager uiManager;
-    public List<Nota> notasList;
-    public Sprite poder;
-
-    [Header("Estado Actual (Solo para Debug)")]
+    [SerializeField] private Animator animator;
     [SerializeField] public int currentPowerUpValue = 0;
     [SerializeField] private bool isReady = false;
-    [SerializeField] public bool isActive = false;
+    [SerializeField] public bool isActivo = false;
 
-    
+    public void Awake()
+    {
+        // Forzar evaluación inmediata del IdlePose para evitar cualquier frame “sucio”
+        animator.Play("Idle", 0, 0f);
+        animator.Update(0f);
+    }
     public void OnNoteHit(int currentCombo)
     {
-        if (!isActive)
+        if (!isActivo)
         {
             // Antes de activar: usa el COMBO global para llenar la barra
             currentPowerUpValue = Mathf.Clamp(currentCombo, 0, comboToFill);
@@ -46,7 +48,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void ResetPower()
     {
-        isActive = false;
+        isActivo = false;
         OnPowerChanged?.Invoke(false); // <<< OFF
         isReady = false;
         currentPowerUpValue = 0;
@@ -59,10 +61,11 @@ public class PowerUpManager : MonoBehaviour
 
     public void OnNoteMiss()
     {
-        if (isActive)
+        if (isActivo)
         {
-            isActive = false;
+            isActivo = false;
             OnPowerChanged?.Invoke(false); // <<< OFF
+            animator.gameObject.SetActive(false);
             scoreManager.SetMultiplier(1);
             uiManager?.UpdateMultiplier(1);
             if(uiManager?.multiplierText)
@@ -76,7 +79,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void TryActivatePowerUp()
     {
-        if (isReady && !isActive)
+        if (isReady && !isActivo)
         {
             isReady = false;
             activarPowerUp();
@@ -86,7 +89,9 @@ public class PowerUpManager : MonoBehaviour
 
     public void activarPowerUp()
     {
-        isActive = true;
+        isActivo = true;
+        animator.gameObject.SetActive(true);
+        animator.SetBool("isActive", true);
         OnPowerChanged?.Invoke(true); // <<< ON
         //primer multiplicador minimo es 2
         int first = Mathf.Max(powerUpMultiplier,2);
