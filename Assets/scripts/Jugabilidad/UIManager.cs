@@ -69,11 +69,13 @@ public class UIManager : MonoBehaviour
     public void ShowPausePanel(bool show)
     {
         if (pausePanel != null)
+            if (show) UpdateStarsUI(); 
             pausePanel.SetActive(show);
     }
     public void ShowFinishPanel(bool show)
     {
         if(finishPanel != null)
+            if(show) UpdateStarsUI();
             finishPanel.SetActive(show);
     }
     public void ShowHitText(string tipo)
@@ -94,6 +96,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void restartStarts()
+    {
+        starUI.HideAll();
+        starUIPause.HideAll();
+        starUIFinish.HideAll();
+    }
+
     public void showMissHit()
     {
         if (falloCoroutine != null)
@@ -106,11 +115,12 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         if (scoreText != null)
-            scoreText.text = "Puntaje: " + score;
+            scoreText.text = "PUNTAJE: " + score;
         if (scoreTextPause != null)
-            scoreTextPause.text = "Puntaje Actual: " + score;
+            scoreTextPause.text = ""+score;
         if (scoreTextFinish != null)   
-            scoreTextFinish.text = "Puntaje Final: " + score;
+            scoreTextFinish.text = "PUNTAJE FINAL: " + score;
+        UpdateStarsUI();
     }
 
     public void UpdateCombo(int combo)
@@ -120,7 +130,7 @@ public class UIManager : MonoBehaviour
             if (combo >= scoreManager.comboToShowThreshold)
             {
                 comboText.gameObject.SetActive(true);
-                comboText.text = "Combo x" + combo;
+                comboText.text = ""+combo;
             }
             else
             {
@@ -136,7 +146,7 @@ public class UIManager : MonoBehaviour
             if (multiplier > 1)
             {
                 multiplierText.gameObject.SetActive(true);
-                multiplierText.text = "x" + multiplier;
+                multiplierText.text = "X" + multiplier;
             }
             else
             {
@@ -161,9 +171,6 @@ public class UIManager : MonoBehaviour
         {
             float powerUpValue = (float)currentValue / maxValue;
             powerUpBar.value = powerUpValue;
-
-            // --- MENSAJE DE DIAGNÓSTICO ---
-            //Debug.Log($"<color=lime>UI MANAGER: Actualizando PowerUpBar. currentValue={currentValue}, maxValue={maxValue}. Valor final: {powerUpValue}</color>");
         }
     }
 

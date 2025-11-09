@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &85393884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85393886}
+  - component: {fileID: 85393885}
+  m_Layer: 0
+  m_Name: SceneMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &85393885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85393884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6963669f13b7c164ebb4a0dffd13252b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneMusicSetter
+  musicKey: 60s
+  delay: 0
+--- !u!4 &85393886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85393884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.11576, y: -0.58606, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95542572
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,12 +216,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b849fd644f178043ae67af1eb939db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarUI
-  starOff: {fileID: 4365859617218734760, guid: 7005211671839554fa96d8260e864f9c, type: 3}
-  starOn: {fileID: 3220710757660816405, guid: 8c58b6533582e8541aec7e5327fa9a16, type: 3}
+  mode: 0
   stars:
   - {fileID: 2053105802}
   - {fileID: 782453632}
   - {fileID: 346033227}
+  offSprite: {fileID: 0}
+  onSprite: {fileID: 0}
+  setNativeSize: 0
 --- !u!1 &202621203
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,12 +850,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b849fd644f178043ae67af1eb939db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarUI
-  starOff: {fileID: 4365859617218734760, guid: 7005211671839554fa96d8260e864f9c, type: 3}
-  starOn: {fileID: 3220710757660816405, guid: 8c58b6533582e8541aec7e5327fa9a16, type: 3}
+  mode: 0
   stars:
   - {fileID: 1867860055}
   - {fileID: 647273682}
   - {fileID: 708558710}
+  offSprite: {fileID: 0}
+  onSprite: {fileID: 0}
+  setNativeSize: 0
 --- !u!1 &528325604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1175,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708558708}
   m_CullTransparentMesh: 1
+--- !u!1 &719274779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 719274781}
+  - component: {fileID: 719274780}
+  m_Layer: 0
+  m_Name: stopmusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &719274780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719274779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf07d0330409d324e81e618dae761115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Botones
+  fadeOutSeconds: 0.4
+--- !u!4 &719274781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719274779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 488.1685, y: 257.03763, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &782453630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1429,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 719274780}
+        m_TargetAssemblyTypeName: Botones, Assembly-CSharp
+        m_MethodName: OnClickStopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1284635495}
         m_TargetAssemblyTypeName: MenuNiveles60, Assembly-CSharp
         m_MethodName: TheBeatles
@@ -2421,6 +2528,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1781007695}
+  - {fileID: 1819798758}
   - {fileID: 876589831}
   - {fileID: 95542573}
   - {fileID: 1178024408}
@@ -2754,6 +2862,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1819798757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819798758}
+  - component: {fileID: 1819798759}
+  m_Layer: 0
+  m_Name: Botones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819798758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819798757}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -117.876465, y: -37.024036, z: 0}
+  m_LocalScale: {x: 1.7250674, y: 1.7250674, z: 1.7250674}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1512662837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819798759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819798757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf07d0330409d324e81e618dae761115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Botones
+  fadeOutSeconds: 0.4
 --- !u!1 &1834199796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,12 +2958,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b849fd644f178043ae67af1eb939db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarUI
-  starOff: {fileID: 4365859617218734760, guid: 7005211671839554fa96d8260e864f9c, type: 3}
-  starOn: {fileID: 3220710757660816405, guid: 8c58b6533582e8541aec7e5327fa9a16, type: 3}
+  mode: 0
   stars:
   - {fileID: 1302637547}
   - {fileID: 205584809}
   - {fileID: 1689702957}
+  offSprite: {fileID: 0}
+  onSprite: {fileID: 0}
+  setNativeSize: 0
 --- !u!1 &1867860053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3216,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2037790467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 719274780}
+        m_TargetAssemblyTypeName: Botones, Assembly-CSharp
+        m_MethodName: OnClickStopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2037790467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3182,3 +3349,5 @@ SceneRoots:
   - {fileID: 1053878280}
   - {fileID: 291422565}
   - {fileID: 1284635494}
+  - {fileID: 85393886}
+  - {fileID: 719274781}

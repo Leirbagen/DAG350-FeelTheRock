@@ -108,6 +108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nota
   laneID: 0
+  powerUpManager: {fileID: 0}
+  anim: {fileID: 809064641620840365}
+  normalController: {fileID: 9100000, guid: b76a90eb3fd6b7c42b984366f64eab41, type: 2}
+  powerController: {fileID: 9100000, guid: 0e88a9a4df4dc8349b100aab2e8d185c, type: 2}
+  sr: {fileID: 0}
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  powerTint: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &7339585286277800294
 MonoBehaviour:
   m_ObjectHideFlags: 0
