@@ -1553,6 +1553,60 @@ MonoBehaviour:
   highlighted: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: 1, g: 1, b: 1, a: 1}
   disabled: {r: 1, g: 1, b: 1, a: 0.5}
+--- !u!1 &537708415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537708417}
+  - component: {fileID: 537708416}
+  m_Layer: 0
+  m_Name: AudioManagerGame
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &537708416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537708415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5a796bfc05f5b47951e049b6fe0eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagerGame
+  musicLibrary:
+  - key: menu
+    clip: {fileID: 8300000, guid: aaecd261c48b0d74eabf8ffc2ea75ea2, type: 3}
+  - key: 60s
+    clip: {fileID: 8300000, guid: 2e5a05834680d9948878d25ac4b11d5d, type: 3}
+  - key: 70s
+    clip: {fileID: 8300000, guid: 454e14d83353cde488bd5e764a7c7b67, type: 3}
+  - key: 80s
+    clip: {fileID: 8300000, guid: a354f934ed548294ca7e7a83fcb714f5, type: 3}
+  fadeSeconds: 1.2
+--- !u!4 &537708417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537708415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.07, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660181810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,6 +2367,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093531861}
   m_CullTransparentMesh: 1
+--- !u!1 &1140513483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140513485}
+  - component: {fileID: 1140513484}
+  m_Layer: 0
+  m_Name: iniciarMusica
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1140513484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140513483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c722b29f448678489cf1c1c93354b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BootMusic
+  startKey: menu
+--- !u!4 &1140513485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140513483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.3, y: 1.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220646392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,7 +2750,7 @@ Transform:
   m_GameObject: {fileID: 1310671926}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.97, y: 4.06, z: 0}
+  m_LocalPosition: {x: -8.2, y: 4.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2988,3 +3087,5 @@ SceneRoots:
   - {fileID: 2141598958}
   - {fileID: 33983002}
   - {fileID: 1310671927}
+  - {fileID: 537708417}
+  - {fileID: 1140513485}

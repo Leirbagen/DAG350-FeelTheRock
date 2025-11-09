@@ -23,6 +23,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NIveles60/NivelTheRollingStones/TheRollingStones.unity
     guid: 142fb899999707649b78516e88ef1bec
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Niveles70.unity
+    guid: ea7c0574ada9b954aaf27bfd4ee65679
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Black Sabbath/BlackSabbath.unity
+    guid: 7594b7b6feac0064696fcf6ddea0464c
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Deep Purple/DeepPurple.unity
+    guid: b1fdd5a176f806146b5fd5de12621ec3
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Led Zeppelin/LedZeppelin.unity
+    guid: 4b16e98b6205aba4296dd3732f14d7ea
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Pink Floyd/PinkFloyd.unity
+    guid: 56de6a6d2bb86844284a6f687f6440bc
+  - enabled: 1
+    path: Assets/Scenes/Niveles70/Queen/Queen.unity
+    guid: 9401380441e363f4fbad1ee1f571d5ec
+  - enabled: 1
+    path: Assets/Scenes/Niveles80/Niveles80.unity
+    guid: b3465c5ed06deff4a836035bfb362798
+  - enabled: 1
+    path: "Assets/Scenes/Niveles80/Guns N\xB0 Roses/GunsNRoses.unity"
+    guid: bf9c1ec05c17d8d43b2e90611cacb4d8
+  - enabled: 1
+    path: Assets/Scenes/Niveles80/Iron Maiden/IronMaiden.unity
+    guid: 5f4e7ff896a043e408bee065a7475d28
+  - enabled: 1
+    path: Assets/Scenes/Niveles80/Metallica/Metallica.unity
+    guid: 6e0816cdd26a1f34bb9fcd935a7820b5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

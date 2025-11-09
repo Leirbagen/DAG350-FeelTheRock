@@ -65,7 +65,7 @@ public class PowerUpManager : MonoBehaviour
         {
             isActivo = false;
             OnPowerChanged?.Invoke(false); // <<< OFF
-            animator.gameObject.SetActive(false);
+            animator.SetBool("isActive", false);
             scoreManager.SetMultiplier(1);
             uiManager?.UpdateMultiplier(1);
             if(uiManager?.multiplierText)

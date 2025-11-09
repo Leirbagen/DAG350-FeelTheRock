@@ -197,6 +197,7 @@ public class GameManager : MonoBehaviour
         scoreManager.SetMultiplier(1);
         healthManager.ResetHealth();   
         powerUpManager.ResetPower();  
+        uiManager?.restartStarts();
 
         // 3. Elimina notas vivas 
         foreach (var note in GameObject.FindGameObjectsWithTag("Nota"))

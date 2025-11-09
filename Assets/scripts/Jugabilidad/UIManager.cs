@@ -69,11 +69,13 @@ public class UIManager : MonoBehaviour
     public void ShowPausePanel(bool show)
     {
         if (pausePanel != null)
+            if (show) UpdateStarsUI(); 
             pausePanel.SetActive(show);
     }
     public void ShowFinishPanel(bool show)
     {
         if(finishPanel != null)
+            if(show) UpdateStarsUI();
             finishPanel.SetActive(show);
     }
     public void ShowHitText(string tipo)
@@ -94,6 +96,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void restartStarts()
+    {
+        starUI.HideAll();
+        starUIPause.HideAll();
+        starUIFinish.HideAll();
+    }
+
     public void showMissHit()
     {
         if (falloCoroutine != null)
@@ -108,9 +117,10 @@ public class UIManager : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "PUNTAJE: " + score;
         if (scoreTextPause != null)
-            scoreTextPause.text = "PUNTAJE ACTUAL: " + score;
+            scoreTextPause.text = ""+score;
         if (scoreTextFinish != null)   
             scoreTextFinish.text = "PUNTAJE FINAL: " + score;
+        UpdateStarsUI();
     }
 
     public void UpdateCombo(int combo)
@@ -161,9 +171,6 @@ public class UIManager : MonoBehaviour
         {
             float powerUpValue = (float)currentValue / maxValue;
             powerUpBar.value = powerUpValue;
-
-            // --- MENSAJE DE DIAGNÓSTICO ---
-            //Debug.Log($"<color=lime>UI MANAGER: Actualizando PowerUpBar. currentValue={currentValue}, maxValue={maxValue}. Valor final: {powerUpValue}</color>");
         }
     }
 
