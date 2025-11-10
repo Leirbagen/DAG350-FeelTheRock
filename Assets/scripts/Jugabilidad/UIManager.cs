@@ -119,7 +119,7 @@ public class UIManager : MonoBehaviour
         if (scoreTextPause != null)
             scoreTextPause.text = ""+score;
         if (scoreTextFinish != null)   
-            scoreTextFinish.text = "PUNTAJE FINAL: " + score;
+            scoreTextFinish.text = "" + score;
         UpdateStarsUI();
     }
 

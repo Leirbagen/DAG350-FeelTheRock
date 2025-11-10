@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 269565965}
   - component: {fileID: 269565964}
   - component: {fileID: 269565963}
+  - component: {fileID: 269565966}
   m_Layer: 5
   m_Name: btn00S
   m_TagString: Untagged
@@ -154,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106.78699, y: -97.755585}
-  m_SizeDelta: {x: 158.8311, y: 194.4731}
+  m_AnchoredPosition: {x: 210.47974, y: -194.67705}
+  m_SizeDelta: {x: 283.9886, y: 347.7162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269565963
 MonoBehaviour:
@@ -251,6 +252,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269565961}
   m_CullTransparentMesh: 1
+--- !u!114 &269565966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269565961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73390210d97e2d74f8ce69fcdfdd445e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectItem
+  decadeId: 
+  sceneName: 
+  chartsInDecade: []
+  targetImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  unlockedSprite: {fileID: 0}
+  openButton: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!1 &295420048
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +285,7 @@ GameObject:
   - component: {fileID: 295420051}
   - component: {fileID: 295420050}
   - component: {fileID: 295420053}
+  - component: {fileID: 295420054}
   m_Layer: 5
   m_Name: btn60S
   m_TagString: Untagged
@@ -287,8 +309,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 109}
-  m_SizeDelta: {x: 158.8311, y: 194.4731}
+  m_AnchoredPosition: {x: -465, y: 175}
+  m_SizeDelta: {x: 283.9886, y: 347.7162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295420050
 MonoBehaviour:
@@ -366,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
+  m_Sprite: {fileID: 2926023111353829103, guid: 6b718b8bfaa787246be9b171b7dd47e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -398,6 +420,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteClickCambiaEscena
   musicKeyOverride: 60s
   preFadeDelay: 0
+--- !u!114 &295420054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295420048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73390210d97e2d74f8ce69fcdfdd445e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectItem
+  decadeId: 60s
+  sceneName: Niveles60
+  chartsInDecade:
+  - {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+  - {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
+  - {fileID: 11400000, guid: 46b4a14fc331d924695f4b76352799c1, type: 2}
+  targetImage: {fileID: 295420051}
+  lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
+  unlockedSprite: {fileID: 2926023111353829103, guid: 6b718b8bfaa787246be9b171b7dd47e3, type: 3}
+  openButton: {fileID: 295420050}
+  progressText: {fileID: 0}
 --- !u!1 &451802456
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,8 +478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427, y: -183.94446}
-  m_SizeDelta: {x: 128.9683, y: 96.1111}
+  m_AnchoredPosition: {x: -743, y: -322}
+  m_SizeDelta: {x: 260.2332, y: 193.9337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451802458
 MonoBehaviour:
@@ -455,7 +500,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -465,8 +510,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -2725347338051746594, guid: e929dbebe1881a5468533ed6616da7e5, type: 3}
+    m_PressedSprite: {fileID: -8755694779892023107, guid: 31281fc2ad97ffb4cbca8e0ba981bf0d, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -512,7 +557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2863067631295312363, guid: 6b82dcd34c8e82d43bcf4945bd4c992f, type: 3}
+  m_Sprite: {fileID: 2604805023234289081, guid: aa807cda66763e84da905f21a58ed896, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -622,6 +667,7 @@ GameObject:
   - component: {fileID: 858332292}
   - component: {fileID: 858332291}
   - component: {fileID: 858332294}
+  - component: {fileID: 858332295}
   m_Layer: 5
   m_Name: btn70S
   m_TagString: Untagged
@@ -645,8 +691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.103771, y: 109.00001}
-  m_SizeDelta: {x: 158.8311, y: 194.4731}
+  m_AnchoredPosition: {x: -21.763687, y: 175.00002}
+  m_SizeDelta: {x: 283.9886, y: 347.7162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858332291
 MonoBehaviour:
@@ -756,6 +802,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteClickCambiaEscena
   musicKeyOverride: 70s
   preFadeDelay: 0
+--- !u!114 &858332295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858332289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73390210d97e2d74f8ce69fcdfdd445e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectItem
+  decadeId: 70s
+  sceneName: Niveles70
+  chartsInDecade:
+  - {fileID: 11400000, guid: 2a2f52fd88a55164394da8a8cfcf30c8, type: 2}
+  - {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
+  - {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
+  - {fileID: 11400000, guid: 45e66b68e124ea343bb96f4619487c54, type: 2}
+  - {fileID: 11400000, guid: c961f0678dbb58f4ea5dc3e9e1186fc1, type: 2}
+  targetImage: {fileID: 858332292}
+  lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
+  unlockedSprite: {fileID: 7847626579968778040, guid: 5153e1671e2d8814ca3e579fc266b8cc, type: 3}
+  openButton: {fileID: 858332291}
+  progressText: {fileID: 0}
 --- !u!1 &1045355952
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1039,7 @@ GameObject:
   - component: {fileID: 1226589500}
   - component: {fileID: 1226589499}
   - component: {fileID: 1226589498}
+  - component: {fileID: 1226589501}
   m_Layer: 5
   m_Name: btn90S
   m_TagString: Untagged
@@ -991,8 +1063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.23944, y: -96.90663}
-  m_SizeDelta: {x: 158.8311, y: 194.4731}
+  m_AnchoredPosition: {x: -261.59717, y: -193.15915}
+  m_SizeDelta: {x: 283.9886, y: 347.7162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226589498
 MonoBehaviour:
@@ -1088,6 +1160,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226589496}
   m_CullTransparentMesh: 1
+--- !u!114 &1226589501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226589496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73390210d97e2d74f8ce69fcdfdd445e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectItem
+  decadeId: 
+  sceneName: 
+  chartsInDecade: []
+  targetImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  unlockedSprite: {fileID: 0}
+  openButton: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!1 &1556889551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1238,7 @@ GameObject:
   - component: {fileID: 1688842513}
   - component: {fileID: 1688842512}
   - component: {fileID: 1688842511}
+  - component: {fileID: 1688842515}
   m_Layer: 5
   m_Name: Decadas
   m_TagString: Untagged
@@ -1182,10 +1275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1237,6 +1330,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1688842515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688842510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a6c8fd2c6363439cb62b614004430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectController
+  items:
+  - {fileID: 295420054}
+  - {fileID: 858332295}
+  - {fileID: 2070452655}
+  - {fileID: 1226589501}
+  - {fileID: 269565966}
 --- !u!1 &1715081460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,8 +1387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1110, y: 521}
+  m_AnchoredPosition: {x: 0, y: 0.0018539}
+  m_SizeDelta: {x: 1920, y: 960.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715081462
 MonoBehaviour:
@@ -1330,6 +1441,7 @@ GameObject:
   - component: {fileID: 2070452652}
   - component: {fileID: 2070452651}
   - component: {fileID: 2070452654}
+  - component: {fileID: 2070452655}
   m_Layer: 5
   m_Name: btn80S
   m_TagString: Untagged
@@ -1353,8 +1465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 226.4903, y: 108.99999}
-  m_SizeDelta: {x: 158.8311, y: 194.4731}
+  m_AnchoredPosition: {x: 424.50815, y: 174.99998}
+  m_SizeDelta: {x: 283.9886, y: 347.7162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070452651
 MonoBehaviour:
@@ -1464,6 +1576,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteClickCambiaEscena
   musicKeyOverride: 80s
   preFadeDelay: 0
+--- !u!114 &2070452655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070452649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73390210d97e2d74f8ce69fcdfdd445e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecadeSelectItem
+  decadeId: 80s
+  sceneName: Niveles80
+  chartsInDecade:
+  - {fileID: 11400000, guid: 77a2e91fb2103e24bb80eb23fc12ecdc, type: 2}
+  - {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
+  - {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
+  targetImage: {fileID: 2070452652}
+  lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
+  unlockedSprite: {fileID: 4817733630037529381, guid: 5298f696eefca6d48b8cbc4b635af438, type: 3}
+  openButton: {fileID: 2070452651}
+  progressText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
