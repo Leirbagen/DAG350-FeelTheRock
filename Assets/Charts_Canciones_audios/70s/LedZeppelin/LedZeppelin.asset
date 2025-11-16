@@ -17,6 +17,6 @@ MonoBehaviour:
   star1Threshold: 0
   star2Threshold: 0
   star3Threshold: 0
-  backingTrackClip: {fileID: 0}
-  instrumentalClip: {fileID: 0}
+  backingTrackClip: {fileID: 8300000, guid: 3b8b579ea41d6e048b8e526f038f6b4f, type: 3}
+  instrumentalClip: {fileID: 8300000, guid: 3b8b579ea41d6e048b8e526f038f6b4f, type: 3}
   notes: []
