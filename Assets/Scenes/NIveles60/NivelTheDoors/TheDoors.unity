@@ -301,6 +301,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 598069944845344960, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: currentSong
+      value: 
+      objectReference: {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
     - target: {fileID: 1552572810913924639, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -328,11 +332,11 @@ PrefabInstance:
     - target: {fileID: 1819673858761103654, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: f76b15109077d5e4f864045194fb3d59, type: 3}
+      objectReference: {fileID: 8300000, guid: 7ef0fe749dd05eb4da4ac9a85d401428, type: 3}
     - target: {fileID: 1845331061422722389, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 55467a119e1144849ac66a6e0ac10a9e, type: 3}
+      objectReference: {fileID: 8300000, guid: 5e72a66abcc6bb142be38234317da5f5, type: 3}
     - target: {fileID: 2002638530534137183, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelSelectController : MonoBehaviour
@@ -12,7 +12,7 @@ public class LevelSelectController : MonoBehaviour
     {
         if (items == null || items.Length == 0)
         {
-            Debug.LogWarning("[LevelSelect] items[] vacío o nulo.");
+            Debug.LogWarning("[LevelSelect] items[] vacÃ­o o nulo.");
             return;
         }
 
@@ -70,7 +70,33 @@ public class LevelSelectController : MonoBehaviour
         }
         else
         {
-            print($"LevelSelect: sceneName vacío para {item.chart?.levelID}");
+            print($"LevelSelect: sceneName vacÃ­o para {item.chart?.levelID}");
+        }
+    }
+    // desbloquea todos los niveles como cheat 
+    public void Cheat_UnlockAllLevels()
+    {
+        if (items == null || items.Length == 0)
+        {
+            Debug.LogWarning("[LevelSelect] Cheat_UnlockAllLevels: no hay items.");
+            return;
+        }
+
+        foreach (var item in items)
+        {
+            if (item == null || item.chart == null) continue;
+
+            string lid = item.chart.levelID;
+
+            // Le damos un score alto y 3 estrellas, y lo marcamos como completado.
+            GameProgress.Instance.ReportResult(
+                lid,
+                score: 999999,   // o lo que quieras
+                stars: 3,
+                markCompleted: true
+            );
+
+            Refresh();  // refrescamos para que se vean todos desbloqueados
         }
     }
 }

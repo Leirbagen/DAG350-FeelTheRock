@@ -151,6 +151,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 465
       objectReference: {fileID: 0}
+    - target: {fileID: 1819673858761103654, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d7839fe50113cbb4a9bb0907dee0ee96, type: 3}
+    - target: {fileID: 1845331061422722389, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d7839fe50113cbb4a9bb0907dee0ee96, type: 3}
     - target: {fileID: 2854442228006775825, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_margin.w
       value: -178.56934
@@ -315,6 +323,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: song
+      value: 
+      objectReference: {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

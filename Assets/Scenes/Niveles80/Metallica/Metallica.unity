@@ -158,11 +158,11 @@ PrefabInstance:
     - target: {fileID: 1819673858761103654, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 9faa2cba56076ba4e8c407cb44e46af9, type: 3}
+      objectReference: {fileID: 8300000, guid: e0be1c03b40d254468ebb36e07e12a47, type: 3}
     - target: {fileID: 1845331061422722389, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 9faa2cba56076ba4e8c407cb44e46af9, type: 3}
+      objectReference: {fileID: 8300000, guid: e0be1c03b40d254468ebb36e07e12a47, type: 3}
     - target: {fileID: 2378334292730967523, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_Resource
       value: 

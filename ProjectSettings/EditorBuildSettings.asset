@@ -53,6 +53,99 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveles80/Metallica/Metallica.unity
     guid: 6e0816cdd26a1f34bb9fcd935a7820b5
+  - enabled: 1
+    path: Assets/Scenes/Niveles90/Nirvana/Nirvana.unity
+    guid: 2b4b8694ed78b1e44a259d6161a7a27d
+  - enabled: 1
+    path: Assets/Scenes/Niveles90/Radiohead/Radiohead.unity
+    guid: 543a5ed66d50ddf4b856190fa52132b0
+  - enabled: 1
+    path: Assets/Scenes/Niveles90/Korn/Korn.unity
+    guid: 838951ef12c250740a890090baa3031d
+  - enabled: 1
+    path: Assets/Scenes/NIveles2000/Linkin Park/LinkinPark.unity
+    guid: 667a4056e611d3f43842c39a370437c3
+  - enabled: 1
+    path: Assets/Scenes/NIveles2000/System of a Down/SystemOfaDown.unity
+    guid: 0894f2dd52e844044ad35e62b392595e
+  - enabled: 1
+    path: Assets/Scenes/NIveles2000/Actic Monkeys/ArcticMonkeys.unity
+    guid: b1dcc3a0399a04845985d4ac8c90f867
+  - enabled: 1
+    path: Assets/Scenes/MenuColecciones/MenuColecciones.unity
+    guid: 4595a88beec53544a8885a5f8eb2b319
+  - enabled: 1
+    path: Assets/Scenes/Coleccion60/Coleccion60.unity
+    guid: ed37886acb26cb24081594f6d6e3e000
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/Coleccion70.unity
+    guid: 7f078dc81690f4043b71fdbeb491679f
+  - enabled: 1
+    path: Assets/Scenes/Coleccion80/Coleccion80.unity
+    guid: 92c383d6a6a8742429705e7838dedb2f
+  - enabled: 1
+    path: Assets/Scenes/Coleccion90/Coleccion90.unity
+    guid: 07ba5f8d86055b343b62a781718d5cce
+  - enabled: 1
+    path: Assets/Scenes/Coleccion2000/Coleccion2000.unity
+    guid: db0a49ec28d7f754081c3e529bfcc6a7
+  - enabled: 1
+    path: Assets/Scenes/Coleccion60/InfoTheBeatles.unity
+    guid: 98ee4490c0e86c54b86883d273ad5243
+  - enabled: 1
+    path: Assets/Scenes/Coleccion60/InfoTheDoors.unity
+    guid: ac6b5f805c84a8e419d719657451d355
+  - enabled: 1
+    path: Assets/Scenes/Coleccion60/InfoTheRollingStones.unity
+    guid: 98c8560d0acd9d74ca3e8266db404173
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/InfoBlackSabbath.unity
+    guid: b2ea702f9a19e074996194ee7bd3d0a3
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/InfoDeepPurple.unity
+    guid: 3ec600abebb17e64cbb95ef224ae1099
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/InfoLedZeppelin.unity
+    guid: 1e9fdbb99f553c2469f8efffaba08fa5
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/InfoPinkFloyd.unity
+    guid: b2e79d49e1453ee44af8ccea70f6a35c
+  - enabled: 1
+    path: Assets/Scenes/Coleccion70/InfoQueen.unity
+    guid: f864114e5d0b72e4ca40268323743aa6
+  - enabled: 1
+    path: Assets/Scenes/Coleccion80/InfoGunsNRoses.unity
+    guid: 4aa608977ceb5344fae8f4fb5ec12f40
+  - enabled: 1
+    path: Assets/Scenes/Coleccion80/InfoIronMaiden.unity
+    guid: e9864acbc2652f34d813779d9edd5f72
+  - enabled: 1
+    path: Assets/Scenes/Coleccion80/InfoMetallica.unity
+    guid: e366caaf63bea66449d099ac1b7331eb
+  - enabled: 1
+    path: Assets/Scenes/Coleccion90/InfoKorn.unity
+    guid: 8c97c1d63bc923042a05e0d3da7b6acb
+  - enabled: 1
+    path: Assets/Scenes/Coleccion90/InfoNirvana.unity
+    guid: 9488b98af02db8e4f9f692d31b666a06
+  - enabled: 1
+    path: Assets/Scenes/Coleccion90/InfoRadiohead.unity
+    guid: b1952440f7fc28a45bd81be029e58f7b
+  - enabled: 1
+    path: Assets/Scenes/Coleccion2000/InfoLinkinPark.unity
+    guid: 5fab1ab4acd64ac4b86c79317e246768
+  - enabled: 1
+    path: Assets/Scenes/Coleccion2000/InfoSystemOfaDown.unity
+    guid: 2e08e801b00444e4da63595f5369cffa
+  - enabled: 1
+    path: Assets/Scenes/Coleccion2000/InfoArcticMonkeys.unity
+    guid: 48f5130c38485144c8047656fdcd0854
+  - enabled: 1
+    path: Assets/Scenes/Niveles90/Niveles90.unity
+    guid: 314f6aa919b341e44b5ebc564351f6f7
+  - enabled: 1
+    path: Assets/Scenes/NIveles2000/Niveles00.unity
+    guid: 7198b90bdc3c6964c973bb5bdf4f8f87
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
