@@ -880,7 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: d3b91d4d40a7c92459cb18e7cb73b4bb, type: 2}
+  chart: {fileID: 11400000, guid: 933a91cebe11d8245a6eff4aa2ec93c1, type: 2}
   sceneName: TheRollingStones
   scoreText: {fileID: 1443314615}
   starUI: {fileID: 456505512}
@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
+  chart: {fileID: 11400000, guid: d343c94f101555d4da5b117a87a4ca9e, type: 2}
   sceneName: TheDoors
   scoreText: {fileID: 1174623734}
   starUI: {fileID: 1834199798}

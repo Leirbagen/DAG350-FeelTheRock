@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // [NUEVO] Preparar audio y spawner
+        //  Preparar audio y spawner
         if (audioManager != null && song != null)
             audioManager.SetupSong(song);
 

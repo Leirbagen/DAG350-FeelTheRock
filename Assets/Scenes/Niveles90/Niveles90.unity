@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 69a32f7a6410d1d4caaec584dfa8231a, type: 2}
+  chart: {fileID: 11400000, guid: 6e146f8b5be813144ae8c2ae30b3e05d, type: 2}
   sceneName: Radiohead
   scoreText: {fileID: 1271386965}
   starUI: {fileID: 2081601844}
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: eeff02681b85d0849b4e7a77bbc0a1fa, type: 2}
+  chart: {fileID: 11400000, guid: 5bedf31495c578a43ac635ec23db75fe, type: 2}
   sceneName: Nirvana
   scoreText: {fileID: 2030399933}
   starUI: {fileID: 1887233228}
@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 9d013b5712f0f7c40a5893dba0d37bce, type: 2}
+  chart: {fileID: 11400000, guid: e2570797c0e19d6499c1d259449eaae6, type: 2}
   sceneName: Korn
   scoreText: {fileID: 256647718}
   starUI: {fileID: 500429175}

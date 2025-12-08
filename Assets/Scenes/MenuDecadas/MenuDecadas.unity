@@ -404,9 +404,9 @@ MonoBehaviour:
   decadeId: 00s
   sceneName: Niveles00
   chartsInDecade:
-  - {fileID: 11400000, guid: d72de385be6b7c64fad13088aa660657, type: 2}
-  - {fileID: 11400000, guid: 190934a22c66ac141a2d3dc290fcd232, type: 2}
-  - {fileID: 11400000, guid: ab785a34bc3d1e2428dcdbd4b2a11835, type: 2}
+  - {fileID: 11400000, guid: e5f40f7c8c30c0b469d36399cef09681, type: 2}
+  - {fileID: 11400000, guid: ed94a3b3d6c08474d93b12af19af3cb8, type: 2}
+  - {fileID: 11400000, guid: 3709329e45a610946b4091a2721418da, type: 2}
   targetImage: {fileID: 269565964}
   lockedSprite: {fileID: -789428199773452378, guid: 89f978fc1db591148bb618ce40ad8b01, type: 3}
   unlockedSprite: {fileID: -6280362139822976332, guid: 2a2e5a527c0f9f941a28fec66fccd93f, type: 3}
@@ -590,8 +590,8 @@ MonoBehaviour:
   sceneName: Niveles60
   chartsInDecade:
   - {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
-  - {fileID: 11400000, guid: d3b91d4d40a7c92459cb18e7cb73b4bb, type: 2}
-  - {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
+  - {fileID: 11400000, guid: 933a91cebe11d8245a6eff4aa2ec93c1, type: 2}
+  - {fileID: 11400000, guid: d343c94f101555d4da5b117a87a4ca9e, type: 2}
   targetImage: {fileID: 295420051}
   lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
   unlockedSprite: {fileID: 3426958404570589701, guid: 0d7384a5688b4a84eaee080ec58fd9fa, type: 3}
@@ -1395,9 +1395,9 @@ MonoBehaviour:
   decadeId: 90s
   sceneName: Niveles90
   chartsInDecade:
-  - {fileID: 11400000, guid: eeff02681b85d0849b4e7a77bbc0a1fa, type: 2}
-  - {fileID: 11400000, guid: 69a32f7a6410d1d4caaec584dfa8231a, type: 2}
-  - {fileID: 11400000, guid: 9d013b5712f0f7c40a5893dba0d37bce, type: 2}
+  - {fileID: 11400000, guid: 5bedf31495c578a43ac635ec23db75fe, type: 2}
+  - {fileID: 11400000, guid: 6e146f8b5be813144ae8c2ae30b3e05d, type: 2}
+  - {fileID: 11400000, guid: e2570797c0e19d6499c1d259449eaae6, type: 2}
   targetImage: {fileID: 1226589499}
   lockedSprite: {fileID: -789428199773452378, guid: 89f978fc1db591148bb618ce40ad8b01, type: 3}
   unlockedSprite: {fileID: 632984809494128666, guid: 3694a209c24ac62458930921e7d1ddc1, type: 3}

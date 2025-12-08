@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 190934a22c66ac141a2d3dc290fcd232, type: 2}
+  chart: {fileID: 11400000, guid: ed94a3b3d6c08474d93b12af19af3cb8, type: 2}
   sceneName: SystemOfaDown
   scoreText: {fileID: 1946551689}
   starUI: {fileID: 1975309519}
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: ab785a34bc3d1e2428dcdbd4b2a11835, type: 2}
+  chart: {fileID: 11400000, guid: 3709329e45a610946b4091a2721418da, type: 2}
   sceneName: ArcticMonkeys
   scoreText: {fileID: 1018827520}
   starUI: {fileID: 2095826705}
@@ -2661,7 +2661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: d72de385be6b7c64fad13088aa660657, type: 2}
+  chart: {fileID: 11400000, guid: e5f40f7c8c30c0b469d36399cef09681, type: 2}
   sceneName: LinkinPark
   scoreText: {fileID: 1027461748}
   starUI: {fileID: 1542932287}

@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 598069944845344960, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: currentSong
+      value: 
+      objectReference: {fileID: 11400000, guid: e2570797c0e19d6499c1d259449eaae6, type: 2}
     - target: {fileID: 1552572810913924639, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -330,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: song
       value: 
-      objectReference: {fileID: 11400000, guid: 9d013b5712f0f7c40a5893dba0d37bce, type: 2}
+      objectReference: {fileID: 11400000, guid: e2570797c0e19d6499c1d259449eaae6, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -436,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: c62aa18ed26d4e64cb5f0019310df770, type: 2}
+  m_Texture: {fileID: 8400000, guid: 39c37c8d9b0c01f419f70be9736293c8, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -626,11 +630,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792562168}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 4b649133871beda4a842e4278d97f8b7, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 0492fea493aa3da40b1e11d3f5cda2c4, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: c62aa18ed26d4e64cb5f0019310df770, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 39c37c8d9b0c01f419f70be9736293c8, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
