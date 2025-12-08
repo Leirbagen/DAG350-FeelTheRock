@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManagerGame : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class AudioManagerGame : MonoBehaviour
 
     [Header("Fade (segundos)")]
     [SerializeField] private float fadeSeconds = 1.2f;
+
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
 
     private Dictionary<string, AudioClip> _clips;
     private AudioSource _a, _b;
@@ -51,6 +54,11 @@ public class AudioManagerGame : MonoBehaviour
         _a.playOnAwake = false;
         _b.playOnAwake = false;
 
+        if (musicMixerGroup != null)
+        {
+            _a.outputAudioMixerGroup = musicMixerGroup;
+            _b.outputAudioMixerGroup = musicMixerGroup;
+        }
         _active = _a;
         _idle = _b;
     }

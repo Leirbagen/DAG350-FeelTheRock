@@ -69,14 +69,15 @@ public class UIManager : MonoBehaviour
     public void ShowPausePanel(bool show)
     {
         if (pausePanel != null)
-            if (show) UpdateStarsUI(); 
             pausePanel.SetActive(show);
+            if (show) UpdateStarsUI(); 
+            
     }
     public void ShowFinishPanel(bool show)
     {
         if(finishPanel != null)
-            if(show) UpdateStarsUI();
             finishPanel.SetActive(show);
+            if (show) UpdateStarsUI();
     }
     public void ShowHitText(string tipo)
     {

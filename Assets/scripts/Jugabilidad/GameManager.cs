@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverClip;  
     [SerializeField] private float gameOverVolume = 1f;
     bool levelFinishedRaised = false;
+    string currentScene;
 
 
 
@@ -53,6 +54,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //  Preparar audio y spawner
+        if (audioManager != null && song != null)
+            audioManager.SetupSong(song);
+
+        if (noteSpawner != null && song != null)
+            noteSpawner.currentSong = song;
+
+        currentScene = SceneManager.GetActiveScene().name;
         star1Threshold = song.star1Threshold;
         star2Threshold = song.star2Threshold;
         star3Threshold = song.star3Threshold;
@@ -68,12 +77,7 @@ public class GameManager : MonoBehaviour
        
         Time.timeScale = 1f;
 
-        // [NUEVO] Preparar audio y spawner
-        if (audioManager != null && song != null)
-            audioManager.SetupSong(song);
-
-        if (noteSpawner != null && song != null)
-            noteSpawner.currentSong = song;
+        
 
         StartRun();
 
@@ -219,10 +223,7 @@ public class GameManager : MonoBehaviour
         uiManager?.ShowFinishPanel(true);
         audioManager?.StopAllAudio();
         noteSpawner?.StopSpawning();
-        // 1) calcula estrellas con score actual
         int stars = EvaluateStars(scoreManager.currentScore, star1Threshold, star2Threshold, star3Threshold);
-
-        // 2) Reporta globalmente (guarda si mejora)
         GameProgress.Instance.ReportResult(levelID, scoreManager.currentScore, stars, true);
     }
 
@@ -245,8 +246,28 @@ public class GameManager : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene("Niveles60");
+        if ((currentScene == "TheBeatles_LetItBe") || (currentScene == "TheDoors") || (currentScene == "TheRollingStones"))
+        {
+            SceneManager.LoadScene("Niveles60");
+        }
+        else if ((currentScene == "BlackSabbath") || (currentScene == "DeepPurple") || (currentScene == "LedZeppelin") || (currentScene == "PinkFloyd") || (currentScene == "Queen"))
+        {
+            SceneManager.LoadScene("Niveles70");
+        }
+        else if ((currentScene == "GunsNRoses") || (currentScene == "IronMaiden") || (currentScene == "Metallica"))
+        {
+            SceneManager.LoadScene("Niveles80");
+        }
+        else if ((currentScene == "Korn") || (currentScene == "Nirvana") || (currentScene == "Radiohead"))
+        {
+            SceneManager.LoadScene("Niveles90");
+        }
+        else if ((currentScene == "ArcticMonkeys") || (currentScene == "LinkinPark") || (currentScene == "SystemOfaDown"))
+        {
+            SceneManager.LoadScene("Niveles00");
+        }
     }
+
 
     public int EvaluateStars(int score, int t1, int t2, int t3)
     {

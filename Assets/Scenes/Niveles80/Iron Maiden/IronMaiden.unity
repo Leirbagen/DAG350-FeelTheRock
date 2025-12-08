@@ -222,8 +222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000020503998}
-  m_SizeDelta: {x: 1113, y: 557}
+  m_AnchoredPosition: {x: -0.0000040531, y: 0.0000029951}
+  m_SizeDelta: {x: 1107, y: 556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213547759
 MonoBehaviour:
@@ -292,6 +292,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 465
       objectReference: {fileID: 0}
+    - target: {fileID: 1819673858761103654, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f0b598245a6f7274c909fccc24cd6610, type: 3}
+    - target: {fileID: 1845331061422722389, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f0b598245a6f7274c909fccc24cd6610, type: 3}
     - target: {fileID: 2854442228006775825, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_margin.w
       value: -178.56934
@@ -456,6 +464,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: song
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -1,0 +1,1272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a571b0004f6b5c5479f3633304cc3c23, type: 3}
+  m_Name: Chart_Linkin_Park
+  m_EditorClassIdentifier: Assembly-CSharp::SongChart
+  songName: Linkin Park
+  levelID: feelTheRock_LinkinPark
+  star1Threshold: 110000
+  star2Threshold: 220000
+  star3Threshold: 330000
+  backingTrackClip: {fileID: 8300000, guid: d18655b117b30814a9d7cf5bc9b9022e, type: 3}
+  instrumentalClip: {fileID: 8300000, guid: d18655b117b30814a9d7cf5bc9b9022e, type: 3}
+  notes:
+  - spawnTime: 2.5
+    laneID: 3
+  - spawnTime: 2.875
+    laneID: 2
+  - spawnTime: 3.25
+    laneID: 3
+  - spawnTime: 3.625
+    laneID: 3
+  - spawnTime: 4
+    laneID: 1
+  - spawnTime: 4.375
+    laneID: 1
+  - spawnTime: 4.75
+    laneID: 1
+  - spawnTime: 5.125
+    laneID: 2
+  - spawnTime: 5.5
+    laneID: 3
+  - spawnTime: 5.875
+    laneID: 3
+  - spawnTime: 6.25
+    laneID: 3
+  - spawnTime: 6.5
+    laneID: 3
+  - spawnTime: 6.625
+    laneID: 2
+  - spawnTime: 6.875
+    laneID: 1
+  - spawnTime: 7.25
+    laneID: 3
+  - spawnTime: 7.625
+    laneID: 3
+  - spawnTime: 8
+    laneID: 3
+  - spawnTime: 8.375
+    laneID: 3
+  - spawnTime: 8.625
+    laneID: 1
+  - spawnTime: 9
+    laneID: 1
+  - spawnTime: 9.375
+    laneID: 1
+  - spawnTime: 9.75
+    laneID: 2
+  - spawnTime: 10.125
+    laneID: 3
+  - spawnTime: 10.5
+    laneID: 3
+  - spawnTime: 10.875
+    laneID: 3
+  - spawnTime: 11.25
+    laneID: 3
+  - spawnTime: 11.5
+    laneID: 3
+  - spawnTime: 11.625
+    laneID: 2
+  - spawnTime: 11.75
+    laneID: 1
+  - spawnTime: 12.125
+    laneID: 1
+  - spawnTime: 12.5
+    laneID: 1
+  - spawnTime: 12.75
+    laneID: 2
+  - spawnTime: 13.25
+    laneID: 3
+  - spawnTime: 13.625
+    laneID: 3
+  - spawnTime: 14
+    laneID: 3
+  - spawnTime: 14.25
+    laneID: 2
+  - spawnTime: 14.5
+    laneID: 1
+  - spawnTime: 14.875
+    laneID: 1
+  - spawnTime: 15.25
+    laneID: 1
+  - spawnTime: 15.5
+    laneID: 2
+  - spawnTime: 15.75
+    laneID: 3
+  - spawnTime: 16.125
+    laneID: 3
+  - spawnTime: 16.5
+    laneID: 3
+  - spawnTime: 16.625
+    laneID: 2
+  - spawnTime: 16.75
+    laneID: 1
+  - spawnTime: 17.125
+    laneID: 1
+  - spawnTime: 17.5
+    laneID: 1
+  - spawnTime: 17.625
+    laneID: 2
+  - spawnTime: 17.75
+    laneID: 3
+  - spawnTime: 18.125
+    laneID: 3
+  - spawnTime: 18.5
+    laneID: 3
+  - spawnTime: 19.5
+    laneID: 1
+  - spawnTime: 19.5
+    laneID: 3
+  - spawnTime: 19.625
+    laneID: 0
+  - spawnTime: 20.75
+    laneID: 0
+  - spawnTime: 20.75
+    laneID: 3
+  - spawnTime: 20.875
+    laneID: 0
+  - spawnTime: 20.875
+    laneID: 3
+  - spawnTime: 23
+    laneID: 3
+  - spawnTime: 24.75
+    laneID: 0
+  - spawnTime: 25.5
+    laneID: 2
+  - spawnTime: 25.5
+    laneID: 3
+  - spawnTime: 27.75
+    laneID: 1
+  - spawnTime: 30
+    laneID: 1
+  - spawnTime: 32.25
+    laneID: 3
+  - spawnTime: 34
+    laneID: 0
+  - spawnTime: 34
+    laneID: 1
+  - spawnTime: 34.75
+    laneID: 1
+  - spawnTime: 37
+    laneID: 3
+  - spawnTime: 39.25
+    laneID: 1
+  - spawnTime: 41.5
+    laneID: 3
+  - spawnTime: 43
+    laneID: 0
+  - spawnTime: 43
+    laneID: 1
+  - spawnTime: 44
+    laneID: 1
+  - spawnTime: 46
+    laneID: 3
+  - spawnTime: 48.25
+    laneID: 1
+  - spawnTime: 49.5
+    laneID: 0
+  - spawnTime: 49.5
+    laneID: 1
+  - spawnTime: 51.25
+    laneID: 1
+  - spawnTime: 51.25
+    laneID: 2
+  - spawnTime: 51.75
+    laneID: 1
+  - spawnTime: 51.875
+    laneID: 2
+  - spawnTime: 52
+    laneID: 3
+  - spawnTime: 52.25
+    laneID: 1
+  - spawnTime: 52.375
+    laneID: 2
+  - spawnTime: 52.5
+    laneID: 3
+  - spawnTime: 53.25
+    laneID: 3
+  - spawnTime: 53.375
+    laneID: 2
+  - spawnTime: 53.5
+    laneID: 1
+  - spawnTime: 53.625
+    laneID: 0
+  - spawnTime: 53.75
+    laneID: 1
+  - spawnTime: 53.875
+    laneID: 2
+  - spawnTime: 54.125
+    laneID: 2
+  - spawnTime: 54.25
+    laneID: 1
+  - spawnTime: 54.375
+    laneID: 0
+  - spawnTime: 54.5
+    laneID: 1
+  - spawnTime: 54.625
+    laneID: 2
+  - spawnTime: 54.75
+    laneID: 3
+  - spawnTime: 55.25
+    laneID: 0
+  - spawnTime: 55.25
+    laneID: 3
+  - spawnTime: 55.375
+    laneID: 2
+  - spawnTime: 56.25
+    laneID: 0
+  - spawnTime: 56.375
+    laneID: 1
+  - spawnTime: 56.375
+    laneID: 3
+  - spawnTime: 56.5
+    laneID: 1
+  - spawnTime: 56.75
+    laneID: 0
+  - spawnTime: 56.875
+    laneID: 1
+  - spawnTime: 57
+    laneID: 1
+  - spawnTime: 57
+    laneID: 3
+  - spawnTime: 57.375
+    laneID: 0
+  - spawnTime: 57.375
+    laneID: 3
+  - spawnTime: 57.5
+    laneID: 1
+  - spawnTime: 57.5
+    laneID: 2
+  - spawnTime: 58.25
+    laneID: 2
+  - spawnTime: 58.375
+    laneID: 1
+  - spawnTime: 58.5
+    laneID: 1
+  - spawnTime: 58.625
+    laneID: 2
+  - spawnTime: 59.375
+    laneID: 0
+  - spawnTime: 59.375
+    laneID: 3
+  - spawnTime: 59.5
+    laneID: 1
+  - spawnTime: 59.5
+    laneID: 2
+  - spawnTime: 61
+    laneID: 0
+  - spawnTime: 61.125
+    laneID: 1
+  - spawnTime: 61.25
+    laneID: 2
+  - spawnTime: 61.375
+    laneID: 3
+  - spawnTime: 61.5
+    laneID: 3
+  - spawnTime: 61.75
+    laneID: 3
+  - spawnTime: 62
+    laneID: 3
+  - spawnTime: 62.125
+    laneID: 2
+  - spawnTime: 62.25
+    laneID: 1
+  - spawnTime: 62.375
+    laneID: 0
+  - spawnTime: 63
+    laneID: 3
+  - spawnTime: 63.125
+    laneID: 2
+  - spawnTime: 63.25
+    laneID: 1
+  - spawnTime: 63.375
+    laneID: 0
+  - spawnTime: 63.5
+    laneID: 3
+  - spawnTime: 63.625
+    laneID: 2
+  - spawnTime: 63.75
+    laneID: 1
+  - spawnTime: 63.875
+    laneID: 0
+  - spawnTime: 64
+    laneID: 1
+  - spawnTime: 64.125
+    laneID: 2
+  - spawnTime: 64.25
+    laneID: 3
+  - spawnTime: 65.25
+    laneID: 3
+  - spawnTime: 65.375
+    laneID: 1
+  - spawnTime: 65.375
+    laneID: 2
+  - spawnTime: 66.5
+    laneID: 0
+  - spawnTime: 66.5
+    laneID: 3
+  - spawnTime: 66.625
+    laneID: 1
+  - spawnTime: 66.625
+    laneID: 2
+  - spawnTime: 67.625
+    laneID: 3
+  - spawnTime: 67.75
+    laneID: 1
+  - spawnTime: 67.75
+    laneID: 2
+  - spawnTime: 67.875
+    laneID: 0
+  - spawnTime: 68
+    laneID: 1
+  - spawnTime: 68.125
+    laneID: 2
+  - spawnTime: 68.375
+    laneID: 1
+  - spawnTime: 68.375
+    laneID: 2
+  - spawnTime: 69.75
+    laneID: 0
+  - spawnTime: 69.875
+    laneID: 1
+  - spawnTime: 70
+    laneID: 2
+  - spawnTime: 70.125
+    laneID: 3
+  - spawnTime: 70.25
+    laneID: 3
+  - spawnTime: 70.5
+    laneID: 3
+  - spawnTime: 70.75
+    laneID: 3
+  - spawnTime: 70.875
+    laneID: 2
+  - spawnTime: 71
+    laneID: 1
+  - spawnTime: 71.125
+    laneID: 0
+  - spawnTime: 71.75
+    laneID: 3
+  - spawnTime: 71.875
+    laneID: 2
+  - spawnTime: 72
+    laneID: 1
+  - spawnTime: 72.125
+    laneID: 0
+  - spawnTime: 72.25
+    laneID: 3
+  - spawnTime: 72.375
+    laneID: 2
+  - spawnTime: 72.5
+    laneID: 1
+  - spawnTime: 72.625
+    laneID: 0
+  - spawnTime: 72.75
+    laneID: 1
+  - spawnTime: 72.875
+    laneID: 2
+  - spawnTime: 73
+    laneID: 3
+  - spawnTime: 73.25
+    laneID: 3
+  - spawnTime: 73.5
+    laneID: 2
+  - spawnTime: 73.75
+    laneID: 1
+  - spawnTime: 73.75
+    laneID: 2
+  - spawnTime: 74.125
+    laneID: 1
+  - spawnTime: 74.125
+    laneID: 2
+  - spawnTime: 74.5
+    laneID: 1
+  - spawnTime: 74.5
+    laneID: 2
+  - spawnTime: 74.875
+    laneID: 1
+  - spawnTime: 74.875
+    laneID: 2
+  - spawnTime: 76
+    laneID: 3
+  - spawnTime: 77.75
+    laneID: 1
+  - spawnTime: 79.75
+    laneID: 0
+  - spawnTime: 79.75
+    laneID: 1
+  - spawnTime: 80.5
+    laneID: 3
+  - spawnTime: 82.25
+    laneID: 1
+  - spawnTime: 84
+    laneID: 3
+  - spawnTime: 85
+    laneID: 1
+  - spawnTime: 86.875
+    laneID: 0
+  - spawnTime: 86.875
+    laneID: 1
+  - spawnTime: 88.75
+    laneID: 3
+  - spawnTime: 89.5
+    laneID: 1
+  - spawnTime: 92
+    laneID: 0
+  - spawnTime: 92
+    laneID: 1
+  - spawnTime: 93.5
+    laneID: 3
+  - spawnTime: 96.5
+    laneID: 1
+  - spawnTime: 98
+    laneID: 0
+  - spawnTime: 98
+    laneID: 1
+  - spawnTime: 98.75
+    laneID: 3
+  - spawnTime: 101
+    laneID: 1
+  - spawnTime: 103
+    laneID: 0
+  - spawnTime: 103
+    laneID: 1
+  - spawnTime: 105.5
+    laneID: 3
+  - spawnTime: 106.125
+    laneID: 1
+  - spawnTime: 106.125
+    laneID: 2
+  - spawnTime: 106.5
+    laneID: 1
+  - spawnTime: 106.625
+    laneID: 2
+  - spawnTime: 106.75
+    laneID: 3
+  - spawnTime: 106.875
+    laneID: 1
+  - spawnTime: 107
+    laneID: 2
+  - spawnTime: 107.125
+    laneID: 3
+  - spawnTime: 107.875
+    laneID: 3
+  - spawnTime: 108
+    laneID: 2
+  - spawnTime: 108.125
+    laneID: 1
+  - spawnTime: 108.25
+    laneID: 0
+  - spawnTime: 108.375
+    laneID: 1
+  - spawnTime: 108.5
+    laneID: 2
+  - spawnTime: 108.625
+    laneID: 1
+  - spawnTime: 108.75
+    laneID: 0
+  - spawnTime: 108.875
+    laneID: 1
+  - spawnTime: 109
+    laneID: 2
+  - spawnTime: 109.125
+    laneID: 3
+  - spawnTime: 109.5
+    laneID: 0
+  - spawnTime: 109.5
+    laneID: 3
+  - spawnTime: 109.625
+    laneID: 2
+  - spawnTime: 110.5
+    laneID: 0
+  - spawnTime: 110.625
+    laneID: 1
+  - spawnTime: 110.75
+    laneID: 1
+  - spawnTime: 110.75
+    laneID: 3
+  - spawnTime: 111
+    laneID: 0
+  - spawnTime: 111.125
+    laneID: 1
+  - spawnTime: 111.25
+    laneID: 1
+  - spawnTime: 111.25
+    laneID: 3
+  - spawnTime: 111.5
+    laneID: 0
+  - spawnTime: 111.625
+    laneID: 1
+  - spawnTime: 111.625
+    laneID: 3
+  - spawnTime: 111.75
+    laneID: 1
+  - spawnTime: 112
+    laneID: 0
+  - spawnTime: 112
+    laneID: 3
+  - spawnTime: 112.125
+    laneID: 1
+  - spawnTime: 112.125
+    laneID: 2
+  - spawnTime: 112.875
+    laneID: 2
+  - spawnTime: 113
+    laneID: 1
+  - spawnTime: 113.125
+    laneID: 1
+  - spawnTime: 113.25
+    laneID: 2
+  - spawnTime: 113.375
+    laneID: 2
+  - spawnTime: 114.125
+    laneID: 0
+  - spawnTime: 114.125
+    laneID: 3
+  - spawnTime: 114.25
+    laneID: 1
+  - spawnTime: 114.25
+    laneID: 2
+  - spawnTime: 116
+    laneID: 0
+  - spawnTime: 116.125
+    laneID: 1
+  - spawnTime: 116.25
+    laneID: 2
+  - spawnTime: 116.375
+    laneID: 3
+  - spawnTime: 116.5
+    laneID: 3
+  - spawnTime: 116.75
+    laneID: 3
+  - spawnTime: 117
+    laneID: 3
+  - spawnTime: 117.125
+    laneID: 2
+  - spawnTime: 117.25
+    laneID: 1
+  - spawnTime: 117.375
+    laneID: 0
+  - spawnTime: 118
+    laneID: 3
+  - spawnTime: 118.125
+    laneID: 2
+  - spawnTime: 118.25
+    laneID: 1
+  - spawnTime: 118.375
+    laneID: 0
+  - spawnTime: 118.5
+    laneID: 3
+  - spawnTime: 118.625
+    laneID: 2
+  - spawnTime: 118.75
+    laneID: 1
+  - spawnTime: 118.875
+    laneID: 0
+  - spawnTime: 119
+    laneID: 1
+  - spawnTime: 119.125
+    laneID: 2
+  - spawnTime: 119.25
+    laneID: 3
+  - spawnTime: 119.75
+    laneID: 2
+  - spawnTime: 119.875
+    laneID: 1
+  - spawnTime: 120
+    laneID: 2
+  - spawnTime: 120.125
+    laneID: 3
+  - spawnTime: 120.25
+    laneID: 1
+  - spawnTime: 120.25
+    laneID: 2
+  - spawnTime: 120.5
+    laneID: 1
+  - spawnTime: 120.5
+    laneID: 2
+  - spawnTime: 121.125
+    laneID: 0
+  - spawnTime: 121.125
+    laneID: 3
+  - spawnTime: 121.25
+    laneID: 1
+  - spawnTime: 121.25
+    laneID: 2
+  - spawnTime: 122.25
+    laneID: 3
+  - spawnTime: 122.375
+    laneID: 1
+  - spawnTime: 122.375
+    laneID: 2
+  - spawnTime: 122.5
+    laneID: 0
+  - spawnTime: 122.625
+    laneID: 1
+  - spawnTime: 122.75
+    laneID: 2
+  - spawnTime: 122.875
+    laneID: 3
+  - spawnTime: 123.125
+    laneID: 1
+  - spawnTime: 123.125
+    laneID: 2
+  - spawnTime: 125
+    laneID: 0
+  - spawnTime: 125.125
+    laneID: 1
+  - spawnTime: 125.25
+    laneID: 2
+  - spawnTime: 125.375
+    laneID: 3
+  - spawnTime: 125.5
+    laneID: 3
+  - spawnTime: 125.75
+    laneID: 3
+  - spawnTime: 126
+    laneID: 3
+  - spawnTime: 126.125
+    laneID: 2
+  - spawnTime: 126.25
+    laneID: 1
+  - spawnTime: 126.375
+    laneID: 0
+  - spawnTime: 127
+    laneID: 3
+  - spawnTime: 127.125
+    laneID: 2
+  - spawnTime: 127.25
+    laneID: 1
+  - spawnTime: 127.375
+    laneID: 0
+  - spawnTime: 127.5
+    laneID: 3
+  - spawnTime: 127.625
+    laneID: 2
+  - spawnTime: 127.75
+    laneID: 1
+  - spawnTime: 127.875
+    laneID: 0
+  - spawnTime: 128
+    laneID: 1
+  - spawnTime: 128.125
+    laneID: 2
+  - spawnTime: 128.25
+    laneID: 3
+  - spawnTime: 128.5
+    laneID: 3
+  - spawnTime: 128.625
+    laneID: 2
+  - spawnTime: 128.875
+    laneID: 1
+  - spawnTime: 128.875
+    laneID: 2
+  - spawnTime: 129.125
+    laneID: 1
+  - spawnTime: 129.125
+    laneID: 2
+  - spawnTime: 129.375
+    laneID: 1
+  - spawnTime: 129.375
+    laneID: 2
+  - spawnTime: 129.625
+    laneID: 1
+  - spawnTime: 129.625
+    laneID: 2
+  - spawnTime: 130
+    laneID: 1
+  - spawnTime: 130
+    laneID: 2
+  - spawnTime: 131.5
+    laneID: 0
+  - spawnTime: 131.75
+    laneID: 1
+  - spawnTime: 132
+    laneID: 2
+  - spawnTime: 132.25
+    laneID: 3
+  - spawnTime: 134
+    laneID: 0
+  - spawnTime: 134
+    laneID: 3
+  - spawnTime: 134.625
+    laneID: 1
+  - spawnTime: 134.625
+    laneID: 2
+  - spawnTime: 134.875
+    laneID: 1
+  - spawnTime: 134.875
+    laneID: 2
+  - spawnTime: 135
+    laneID: 1
+  - spawnTime: 135
+    laneID: 2
+  - spawnTime: 136.25
+    laneID: 0
+  - spawnTime: 136.375
+    laneID: 1
+  - spawnTime: 136.5
+    laneID: 2
+  - spawnTime: 136.625
+    laneID: 1
+  - spawnTime: 136.75
+    laneID: 0
+  - spawnTime: 136.875
+    laneID: 1
+  - spawnTime: 137
+    laneID: 2
+  - spawnTime: 137.125
+    laneID: 3
+  - spawnTime: 137.25
+    laneID: 3
+  - spawnTime: 137.375
+    laneID: 2
+  - spawnTime: 137.5
+    laneID: 1
+  - spawnTime: 137.625
+    laneID: 0
+  - spawnTime: 137.75
+    laneID: 1
+  - spawnTime: 138
+    laneID: 1
+  - spawnTime: 138.125
+    laneID: 2
+  - spawnTime: 138.25
+    laneID: 3
+  - spawnTime: 138.5
+    laneID: 3
+  - spawnTime: 138.625
+    laneID: 2
+  - spawnTime: 138.75
+    laneID: 1
+  - spawnTime: 139
+    laneID: 0
+  - spawnTime: 139.375
+    laneID: 0
+  - spawnTime: 139.375
+    laneID: 3
+  - spawnTime: 139.5
+    laneID: 1
+  - spawnTime: 139.5
+    laneID: 2
+  - spawnTime: 140.75
+    laneID: 1
+  - spawnTime: 140.75
+    laneID: 2
+  - spawnTime: 141.125
+    laneID: 1
+  - spawnTime: 141.125
+    laneID: 2
+  - spawnTime: 141.625
+    laneID: 1
+  - spawnTime: 141.625
+    laneID: 2
+  - spawnTime: 143.125
+    laneID: 0
+  - spawnTime: 143.25
+    laneID: 1
+  - spawnTime: 143.375
+    laneID: 2
+  - spawnTime: 143.5
+    laneID: 3
+  - spawnTime: 143.75
+    laneID: 3
+  - spawnTime: 143.875
+    laneID: 2
+  - spawnTime: 144
+    laneID: 1
+  - spawnTime: 144.125
+    laneID: 0
+  - spawnTime: 144.375
+    laneID: 0
+  - spawnTime: 144.625
+    laneID: 0
+  - spawnTime: 144.75
+    laneID: 2
+  - spawnTime: 144.75
+    laneID: 3
+  - spawnTime: 145.125
+    laneID: 0
+  - spawnTime: 145.375
+    laneID: 1
+  - spawnTime: 145.5
+    laneID: 2
+  - spawnTime: 145.625
+    laneID: 3
+  - spawnTime: 145.875
+    laneID: 0
+  - spawnTime: 146
+    laneID: 1
+  - spawnTime: 146
+    laneID: 2
+  - spawnTime: 148.25
+    laneID: 0
+  - spawnTime: 148.25
+    laneID: 3
+  - spawnTime: 150
+    laneID: 0
+  - spawnTime: 150
+    laneID: 3
+  - spawnTime: 150.25
+    laneID: 1
+  - spawnTime: 150.25
+    laneID: 2
+  - spawnTime: 151
+    laneID: 0
+  - spawnTime: 151
+    laneID: 3
+  - spawnTime: 152.5
+    laneID: 1
+  - spawnTime: 152.5
+    laneID: 2
+  - spawnTime: 152.875
+    laneID: 1
+  - spawnTime: 152.875
+    laneID: 2
+  - spawnTime: 154.875
+    laneID: 0
+  - spawnTime: 154.875
+    laneID: 2
+  - spawnTime: 154.875
+    laneID: 3
+  - spawnTime: 155.75
+    laneID: 0
+  - spawnTime: 155.75
+    laneID: 2
+  - spawnTime: 155.75
+    laneID: 3
+  - spawnTime: 156.5
+    laneID: 1
+  - spawnTime: 156.625
+    laneID: 2
+  - spawnTime: 156.75
+    laneID: 3
+  - spawnTime: 156.875
+    laneID: 2
+  - spawnTime: 157
+    laneID: 1
+  - spawnTime: 157.125
+    laneID: 0
+  - spawnTime: 157.25
+    laneID: 1
+  - spawnTime: 157.375
+    laneID: 2
+  - spawnTime: 157.5
+    laneID: 3
+  - spawnTime: 157.625
+    laneID: 1
+  - spawnTime: 157.625
+    laneID: 2
+  - spawnTime: 159.625
+    laneID: 0
+  - spawnTime: 159.625
+    laneID: 3
+  - spawnTime: 161.625
+    laneID: 1
+  - spawnTime: 161.625
+    laneID: 2
+  - spawnTime: 162.5
+    laneID: 0
+  - spawnTime: 162.5
+    laneID: 2
+  - spawnTime: 163.25
+    laneID: 0
+  - spawnTime: 163.375
+    laneID: 1
+  - spawnTime: 163.5
+    laneID: 2
+  - spawnTime: 163.625
+    laneID: 3
+  - spawnTime: 163.875
+    laneID: 2
+  - spawnTime: 164
+    laneID: 1
+  - spawnTime: 164.125
+    laneID: 0
+  - spawnTime: 164.5
+    laneID: 0
+  - spawnTime: 164.5
+    laneID: 2
+  - spawnTime: 164.5
+    laneID: 3
+  - spawnTime: 165
+    laneID: 0
+  - spawnTime: 165
+    laneID: 2
+  - spawnTime: 165
+    laneID: 3
+  - spawnTime: 165.5
+    laneID: 1
+  - spawnTime: 165.5
+    laneID: 2
+  - spawnTime: 165.875
+    laneID: 1
+  - spawnTime: 165.875
+    laneID: 2
+  - spawnTime: 166.25
+    laneID: 1
+  - spawnTime: 166.25
+    laneID: 2
+  - spawnTime: 166.625
+    laneID: 2
+  - spawnTime: 166.75
+    laneID: 1
+  - spawnTime: 166.875
+    laneID: 2
+  - spawnTime: 167
+    laneID: 1
+  - spawnTime: 168
+    laneID: 0
+  - spawnTime: 168.125
+    laneID: 1
+  - spawnTime: 168.25
+    laneID: 1
+  - spawnTime: 168.25
+    laneID: 3
+  - spawnTime: 168.5
+    laneID: 0
+  - spawnTime: 168.625
+    laneID: 1
+  - spawnTime: 168.75
+    laneID: 1
+  - spawnTime: 168.75
+    laneID: 3
+  - spawnTime: 169.125
+    laneID: 0
+  - spawnTime: 169.125
+    laneID: 3
+  - spawnTime: 169.25
+    laneID: 1
+  - spawnTime: 169.25
+    laneID: 2
+  - spawnTime: 170
+    laneID: 2
+  - spawnTime: 170.125
+    laneID: 1
+  - spawnTime: 170.25
+    laneID: 1
+  - spawnTime: 170.375
+    laneID: 2
+  - spawnTime: 171.25
+    laneID: 0
+  - spawnTime: 171.25
+    laneID: 3
+  - spawnTime: 171.375
+    laneID: 1
+  - spawnTime: 171.375
+    laneID: 2
+  - spawnTime: 173
+    laneID: 0
+  - spawnTime: 173.125
+    laneID: 1
+  - spawnTime: 173.25
+    laneID: 2
+  - spawnTime: 173.375
+    laneID: 3
+  - spawnTime: 173.5
+    laneID: 3
+  - spawnTime: 173.75
+    laneID: 3
+  - spawnTime: 174
+    laneID: 3
+  - spawnTime: 174.125
+    laneID: 2
+  - spawnTime: 174.25
+    laneID: 1
+  - spawnTime: 174.375
+    laneID: 0
+  - spawnTime: 175
+    laneID: 3
+  - spawnTime: 175.125
+    laneID: 2
+  - spawnTime: 175.25
+    laneID: 1
+  - spawnTime: 175.375
+    laneID: 0
+  - spawnTime: 175.5
+    laneID: 3
+  - spawnTime: 175.625
+    laneID: 2
+  - spawnTime: 175.75
+    laneID: 1
+  - spawnTime: 175.875
+    laneID: 0
+  - spawnTime: 176
+    laneID: 1
+  - spawnTime: 176.125
+    laneID: 2
+  - spawnTime: 176.25
+    laneID: 3
+  - spawnTime: 176.75
+    laneID: 2
+  - spawnTime: 176.875
+    laneID: 1
+  - spawnTime: 177
+    laneID: 2
+  - spawnTime: 177.125
+    laneID: 3
+  - spawnTime: 177.375
+    laneID: 1
+  - spawnTime: 177.375
+    laneID: 2
+  - spawnTime: 177.625
+    laneID: 1
+  - spawnTime: 177.625
+    laneID: 2
+  - spawnTime: 178.25
+    laneID: 0
+  - spawnTime: 178.25
+    laneID: 3
+  - spawnTime: 178.375
+    laneID: 1
+  - spawnTime: 178.375
+    laneID: 2
+  - spawnTime: 179
+    laneID: 3
+  - spawnTime: 179.125
+    laneID: 2
+  - spawnTime: 179.25
+    laneID: 1
+  - spawnTime: 179.375
+    laneID: 0
+  - spawnTime: 179.5
+    laneID: 1
+  - spawnTime: 179.625
+    laneID: 2
+  - spawnTime: 179.75
+    laneID: 3
+  - spawnTime: 180.25
+    laneID: 1
+  - spawnTime: 180.25
+    laneID: 2
+  - spawnTime: 180.5
+    laneID: 1
+  - spawnTime: 180.5
+    laneID: 2
+  - spawnTime: 182
+    laneID: 0
+  - spawnTime: 182.125
+    laneID: 1
+  - spawnTime: 182.25
+    laneID: 2
+  - spawnTime: 182.375
+    laneID: 3
+  - spawnTime: 182.5
+    laneID: 3
+  - spawnTime: 182.75
+    laneID: 3
+  - spawnTime: 183
+    laneID: 3
+  - spawnTime: 183.125
+    laneID: 2
+  - spawnTime: 183.25
+    laneID: 1
+  - spawnTime: 183.375
+    laneID: 0
+  - spawnTime: 184
+    laneID: 3
+  - spawnTime: 184.125
+    laneID: 2
+  - spawnTime: 184.25
+    laneID: 1
+  - spawnTime: 184.375
+    laneID: 0
+  - spawnTime: 184.5
+    laneID: 3
+  - spawnTime: 184.625
+    laneID: 2
+  - spawnTime: 184.75
+    laneID: 1
+  - spawnTime: 184.875
+    laneID: 0
+  - spawnTime: 185
+    laneID: 1
+  - spawnTime: 185.125
+    laneID: 2
+  - spawnTime: 185.25
+    laneID: 3
+  - spawnTime: 185.5
+    laneID: 3
+  - spawnTime: 185.625
+    laneID: 2
+  - spawnTime: 185.875
+    laneID: 1
+  - spawnTime: 185.875
+    laneID: 2
+  - spawnTime: 186.25
+    laneID: 1
+  - spawnTime: 186.25
+    laneID: 2
+  - spawnTime: 186.5
+    laneID: 1
+  - spawnTime: 186.5
+    laneID: 2
+  - spawnTime: 186.75
+    laneID: 1
+  - spawnTime: 186.75
+    laneID: 2
+  - spawnTime: 187
+    laneID: 1
+  - spawnTime: 187
+    laneID: 2
+  - spawnTime: 187.5
+    laneID: 3
+  - spawnTime: 187.875
+    laneID: 2
+  - spawnTime: 188.25
+    laneID: 3
+  - spawnTime: 188.625
+    laneID: 2
+  - spawnTime: 189
+    laneID: 3
+  - spawnTime: 189.375
+    laneID: 2
+  - spawnTime: 189.75
+    laneID: 3
+  - spawnTime: 190.125
+    laneID: 2
+  - spawnTime: 190.5
+    laneID: 3
+  - spawnTime: 190.875
+    laneID: 2
+  - spawnTime: 191.25
+    laneID: 3
+  - spawnTime: 191.5
+    laneID: 1
+  - spawnTime: 191.625
+    laneID: 2
+  - spawnTime: 192
+    laneID: 3
+  - spawnTime: 192.375
+    laneID: 2
+  - spawnTime: 192.75
+    laneID: 3
+  - spawnTime: 193.125
+    laneID: 2
+  - spawnTime: 193.5
+    laneID: 3
+  - spawnTime: 193.875
+    laneID: 2
+  - spawnTime: 194.25
+    laneID: 3
+  - spawnTime: 194.625
+    laneID: 2
+  - spawnTime: 195
+    laneID: 3
+  - spawnTime: 195.375
+    laneID: 2
+  - spawnTime: 195.75
+    laneID: 3
+  - spawnTime: 196.125
+    laneID: 2
+  - spawnTime: 196.5
+    laneID: 3
+  - spawnTime: 196.75
+    laneID: 1
+  - spawnTime: 196.875
+    laneID: 2
+  - spawnTime: 197.25
+    laneID: 3
+  - spawnTime: 197.625
+    laneID: 2
+  - spawnTime: 198
+    laneID: 3
+  - spawnTime: 198.375
+    laneID: 2
+  - spawnTime: 198.75
+    laneID: 3
+  - spawnTime: 199.125
+    laneID: 2
+  - spawnTime: 199.5
+    laneID: 3
+  - spawnTime: 199.875
+    laneID: 2
+  - spawnTime: 200.25
+    laneID: 3
+  - spawnTime: 200.625
+    laneID: 2
+  - spawnTime: 201
+    laneID: 3
+  - spawnTime: 201.25
+    laneID: 1
+  - spawnTime: 201.375
+    laneID: 2
+  - spawnTime: 201.75
+    laneID: 3
+  - spawnTime: 202.125
+    laneID: 2
+  - spawnTime: 202.5
+    laneID: 3
+  - spawnTime: 202.875
+    laneID: 2
+  - spawnTime: 203.25
+    laneID: 3
+  - spawnTime: 203.625
+    laneID: 2
+  - spawnTime: 204
+    laneID: 3
+  - spawnTime: 204.375
+    laneID: 2
+  - spawnTime: 204.75
+    laneID: 3
+  - spawnTime: 205.125
+    laneID: 2
+  - spawnTime: 205.5
+    laneID: 3
+  - spawnTime: 205.875
+    laneID: 2
+  - spawnTime: 206.25
+    laneID: 3
+  - spawnTime: 206.625
+    laneID: 2
+  - spawnTime: 207
+    laneID: 3
+  - spawnTime: 207.875
+    laneID: 0
+  - spawnTime: 208
+    laneID: 1
+  - spawnTime: 208.25
+    laneID: 2
+  - spawnTime: 208.5
+    laneID: 3
+  - spawnTime: 208.75
+    laneID: 3
+  - spawnTime: 208.875
+    laneID: 2
+  - spawnTime: 209
+    laneID: 1
+  - spawnTime: 209.125
+    laneID: 0
+  - spawnTime: 209.25
+    laneID: 1
+  - spawnTime: 209.375
+    laneID: 2
+  - spawnTime: 209.5
+    laneID: 3
+  - spawnTime: 209.75
+    laneID: 2
+  - spawnTime: 209.875
+    laneID: 1
+  - spawnTime: 210.125
+    laneID: 1
+  - spawnTime: 210.25
+    laneID: 2
+  - spawnTime: 210.375
+    laneID: 3
+  - spawnTime: 210.625
+    laneID: 2
+  - spawnTime: 211
+    laneID: 3
+  - spawnTime: 211.5
+    laneID: 2
+  - spawnTime: 211.875
+    laneID: 3

@@ -10,6 +10,8 @@ public class NoteSpawner : MonoBehaviour
     public GameObject[] notePrefabs; // Un prefab por carril
     public Transform[] laneStartPositions;
     public Transform[] laneEndPositions;
+    [Header("Delay global del chart")]
+    public float chartDelay = 5f; // por ejemplo 1.5 segundos
 
     public int nextNoteIndex;
     private bool isSpawning = false;
@@ -23,10 +25,11 @@ public class NoteSpawner : MonoBehaviour
     private void Start()
     {
         nextNoteIndex = 0;
+        audioManager = AudioManager.instance;
+
     }
     private void Awake()
     {
-        audioManager = AudioManager.instance;
     }
 
 
@@ -43,8 +46,10 @@ public class NoteSpawner : MonoBehaviour
         {
             var n = currentSong.notes[nextNoteIndex];
 
+            float noteSpawnTimeWithDelay = n.spawnTime + chartDelay;
+
             // [MOD] Lanzar con antelación fallTime para llegar justo en spawnTime al detector
-            if (sontTimeRelative >= (n.spawnTime - fallTime))
+            if (sontTimeRelative >= (noteSpawnTimeWithDelay - fallTime))
             {
                 SpawnNote(n);
                 nextNoteIndex++;
@@ -78,8 +83,8 @@ public class NoteSpawner : MonoBehaviour
         //  Reinicia índice
         nextNoteIndex = 0;
 
-
-        if(audioManager != null)
+        //(float)audioManager.GetSongDspTime()
+        if (audioManager != null)
             spawnerAnchorTime = (float)audioManager.GetSongDspTime();
         else
             spawnerAnchorTime = Time.time;

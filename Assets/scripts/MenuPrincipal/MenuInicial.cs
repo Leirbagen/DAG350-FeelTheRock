@@ -14,6 +14,11 @@ public class MenuInicial : MonoBehaviour
         SceneManager.LoadScene("MenuDecadas");
     }
 
+    public void colecciones()
+    {
+        SceneManager.LoadScene("MenuColecciones");
+    }
+
     public void Salir()
     {
         Application.Quit();

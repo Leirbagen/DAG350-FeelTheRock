@@ -80,16 +80,11 @@ public class StarUI : MonoBehaviour
     {
         EnsureInit();
 
-        // En paneles estáticos, al abrir/reenable, garantizamos “apagado” visual por defecto
+       
         if (mode == DisplayMode.StaticSprites)
-            ApplyStatic(0);
+            ApplyStatic(currentShown);
     }
 
-    /// <summary>
-    /// Actualiza la UI de estrellas al valor 'count'.
-    /// - HUD (animado): solo revela de currentShown -> count con animación (no repite lo ya visto).
-    /// - Pausa/Final (estático): pinta TODAS según 'count' sin animación.
-    /// </summary>
     public void SetStars(int count)
     {
         EnsureInit();
@@ -139,9 +134,6 @@ public class StarUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Oculta todo (HUD) o apaga todo (Pausa/Final).
-    /// </summary>
     public void HideAll()
     {
         EnsureInit();

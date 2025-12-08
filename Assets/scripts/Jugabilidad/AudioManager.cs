@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         started = false;
     }
 
-    // 🔸 Arrancar TODO sincronizado en una misma marca de tiempo DSP
+    //  Arrancar TODO sincronizado en una misma marca de tiempo DSP
     public void StartAllSynced(double leadTime = 0.1)
     {
         if (started) return;

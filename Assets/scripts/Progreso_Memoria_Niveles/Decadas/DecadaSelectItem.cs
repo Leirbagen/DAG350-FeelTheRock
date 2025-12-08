@@ -30,7 +30,7 @@ public class DecadeSelectItem : MonoBehaviour
             openButton.onClick.AddListener(() => onOpen?.Invoke(this));
         }
 
-        // progreso opcional
+        // progreso 
         if (progressText)
         {
             int done = 0;
