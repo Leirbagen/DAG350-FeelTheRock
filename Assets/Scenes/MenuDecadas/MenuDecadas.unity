@@ -1843,7 +1843,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
   targetImage: {fileID: 2070452652}
   lockedSprite: {fileID: -789428199773452378, guid: 89f978fc1db591148bb618ce40ad8b01, type: 3}
-  unlockedSprite: {fileID: 2030045502964275548, guid: de18dc56bf4cc51478e16a8a89a88a21, type: 3}
+  unlockedSprite: {fileID: 1516892974991655508, guid: cbfa8d05db1fc5041b87e149a096389e, type: 3}
   openButton: {fileID: 2070452651}
   progressText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

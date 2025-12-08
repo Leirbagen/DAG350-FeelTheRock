@@ -558,7 +558,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab785a34bc3d1e2428dcdbd4b2a11835, type: 2}
   targetImage: {fileID: 591925816}
   lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
-  unlockedSprite: {fileID: -6280362139822976332, guid: 2a2e5a527c0f9f941a28fec66fccd93f, type: 3}
+  unlockedSprite: {fileID: -5831443961534412486, guid: 8d238b4f997e16249923d37788f8cbfa, type: 3}
   openButton: {fileID: 591925815}
   progressText: {fileID: 0}
 --- !u!114 &591925815
@@ -590,7 +590,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 3217346291991254790, guid: 43113910df24cde4bacefe64ce3f9880, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -7453279209571123138, guid: a16a28b65bbcd49428f8a6c1dfc609fc, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d013b5712f0f7c40a5893dba0d37bce, type: 2}
   targetImage: {fileID: 1629135184}
   lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
-  unlockedSprite: {fileID: 632984809494128666, guid: 3694a209c24ac62458930921e7d1ddc1, type: 3}
+  unlockedSprite: {fileID: -7142723707424143615, guid: c5f9cd102222eda4f9f738c041a2e67d, type: 3}
   openButton: {fileID: 1629135183}
   progressText: {fileID: 0}
 --- !u!1 &1805068379
