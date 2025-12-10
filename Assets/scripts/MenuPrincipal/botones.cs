@@ -8,6 +8,7 @@ public class ControladorBotones : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         StartCoroutine(ActivarBotonesDespuesDeTiempo());
     }
 

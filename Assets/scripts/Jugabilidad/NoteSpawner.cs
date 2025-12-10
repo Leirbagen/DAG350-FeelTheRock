@@ -11,7 +11,6 @@ public class NoteSpawner : MonoBehaviour
     public Transform[] laneStartPositions;
     public Transform[] laneEndPositions;
     [Header("Delay global del chart")]
-    public float chartDelay = 5f; // por ejemplo 1.5 segundos
 
     public int nextNoteIndex;
     private bool isSpawning = false;
@@ -45,11 +44,8 @@ public class NoteSpawner : MonoBehaviour
         while (nextNoteIndex < currentSong.notes.Count)
         {
             var n = currentSong.notes[nextNoteIndex];
-
-            float noteSpawnTimeWithDelay = n.spawnTime + chartDelay;
-
             // [MOD] Lanzar con antelación fallTime para llegar justo en spawnTime al detector
-            if (sontTimeRelative >= (noteSpawnTimeWithDelay - fallTime))
+            if (sontTimeRelative >= (n.spawnTime - fallTime))
             {
                 SpawnNote(n);
                 nextNoteIndex++;
