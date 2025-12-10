@@ -452,8 +452,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -2725347338051746594, guid: e929dbebe1881a5468533ed6616da7e5, type: 3}
-    m_PressedSprite: {fileID: -8755694779892023107, guid: 31281fc2ad97ffb4cbca8e0ba981bf0d, type: 3}
+    m_HighlightedSprite: {fileID: -6937702965998864580, guid: 2327eebed6676044cad241374de7b1c5, type: 3}
+    m_PressedSprite: {fileID: -6123960620684788653, guid: 65edf8f57efcf84459524c2e0eb49279, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -553,9 +553,9 @@ MonoBehaviour:
   decadeId: 00s
   sceneName: Coleccion2000
   chartsInDecade:
-  - {fileID: 11400000, guid: d72de385be6b7c64fad13088aa660657, type: 2}
-  - {fileID: 11400000, guid: 190934a22c66ac141a2d3dc290fcd232, type: 2}
-  - {fileID: 11400000, guid: ab785a34bc3d1e2428dcdbd4b2a11835, type: 2}
+  - {fileID: 11400000, guid: e5f40f7c8c30c0b469d36399cef09681, type: 2}
+  - {fileID: 11400000, guid: ed94a3b3d6c08474d93b12af19af3cb8, type: 2}
+  - {fileID: 11400000, guid: 3709329e45a610946b4091a2721418da, type: 2}
   targetImage: {fileID: 591925816}
   lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
   unlockedSprite: {fileID: -5831443961534412486, guid: 8d238b4f997e16249923d37788f8cbfa, type: 3}
@@ -1483,8 +1483,8 @@ MonoBehaviour:
   sceneName: Coleccion90
   chartsInDecade:
   - {fileID: 11400000, guid: 5bedf31495c578a43ac635ec23db75fe, type: 2}
-  - {fileID: 11400000, guid: 69a32f7a6410d1d4caaec584dfa8231a, type: 2}
-  - {fileID: 11400000, guid: 9d013b5712f0f7c40a5893dba0d37bce, type: 2}
+  - {fileID: 11400000, guid: 6e146f8b5be813144ae8c2ae30b3e05d, type: 2}
+  - {fileID: 11400000, guid: e2570797c0e19d6499c1d259449eaae6, type: 2}
   targetImage: {fileID: 1629135184}
   lockedSprite: {fileID: 767987428879561730, guid: 2ece4d94d9f15e945b588c766fd61c8d, type: 3}
   unlockedSprite: {fileID: -7142723707424143615, guid: c5f9cd102222eda4f9f738c041a2e67d, type: 3}

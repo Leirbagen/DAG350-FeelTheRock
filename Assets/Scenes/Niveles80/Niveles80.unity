@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+  chart: {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
   sceneName: GunsNRoses
   scoreText: {fileID: 1591029011}
   starUI: {fileID: 319620424}
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 1738e0a6f964dd34d9c79a7be6905a2b, type: 2}
+  chart: {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
   sceneName: IronMaiden
   scoreText: {fileID: 1481407635}
   starUI: {fileID: 332246444}
