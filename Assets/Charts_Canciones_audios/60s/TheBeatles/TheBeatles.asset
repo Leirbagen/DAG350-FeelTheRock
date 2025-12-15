@@ -18,8 +18,8 @@ MonoBehaviour:
   star1Threshold: 150000
   star2Threshold: 300000
   star3Threshold: 600000
-  backingTrackClip: {fileID: 8300000, guid: df11ece906c5d2743aa5be2f93833c95, type: 3}
-  instrumentalClip: {fileID: 8300000, guid: 276505f82046421449a37b50e1605c50, type: 3}
+  backingTrackClip: {fileID: 8300000, guid: ac955b0d0715cf14482b237e216cae55, type: 3}
+  instrumentalClip: {fileID: 8300000, guid: ac955b0d0715cf14482b237e216cae55, type: 3}
   notes:
   - spawnTime: 3.125
     laneID: 0
