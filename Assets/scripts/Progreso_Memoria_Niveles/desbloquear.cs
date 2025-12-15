@@ -69,7 +69,7 @@ public class CheatCodeUnlockAll : MonoBehaviour
             GameProgress.Instance.ReportResult(
                 lid,
                 score: 999999,
-                stars: 3,
+                stars: 0,
                 markCompleted: true
             );
         }
