@@ -51,9 +51,10 @@ public class PowerUpManager : MonoBehaviour
 
     public void ResetPower()
     {
+        animator.SetBool("isActive", false);
+        isReady = false;
         isActivo = false;
         OnPowerChanged?.Invoke(false); // <<< OFF
-        isReady = false;
         currentPowerUpValue = 0;
         
         scoreManager.SetMultiplier(1);

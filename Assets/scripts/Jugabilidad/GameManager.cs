@@ -201,6 +201,8 @@ public class GameManager : MonoBehaviour
     }
     public void RestartRun()
     {
+        uiManager?.ShowFinishPanel(false);
+        uiManager?.ShowGameOverPanel(false);
         gameOver.Stop();
         // 1. Reactiva tiempo y limpia flags
         Time.timeScale = 1f;
@@ -210,6 +212,7 @@ public class GameManager : MonoBehaviour
         scoreManager.currentScore = 0;
         scoreManager.currentCombo = 0;
         uiManager?.UpdateScore(0);
+        uiManager?.UpdateCombo(0);  
         scoreManager.SetMultiplier(1);
         healthManager.ResetHealth();   
         powerUpManager.ResetPower();  
@@ -219,6 +222,7 @@ public class GameManager : MonoBehaviour
         uiManager.D.gameObject.SetActive(true);
         uiManager.F.gameObject.SetActive(true);
 
+
         // 3. Elimina notas vivas 
         foreach (var note in GameObject.FindGameObjectsWithTag("Nota"))
             Destroy(note);
@@ -227,16 +231,14 @@ public class GameManager : MonoBehaviour
         audioManager?.StopAllAudio();
         audioManager?.StartAllSynced();
         noteSpawner?.ResetAndStart();
-        // 5. Oculta panel y reactiva input
-        uiManager?.ShowGameOverPanel(false);
         if (inputManager != null)
             inputManager.enabled = true;
     }
 
     void OnLevelFinish()
     {
-
         uiManager?.ShowFinishPanel(true);
+        powerUpManager.ResetPower();
         audioManager?.StopAllAudio();
         noteSpawner?.StopSpawning();
         uiManager.A.gameObject.SetActive(false);
