@@ -15,9 +15,9 @@ MonoBehaviour:
   songName: The Doors
   levelID: feelTheRock_TheDoors
   chartDelay: 2.8
-  star1Threshold: 1600000
-  star2Threshold: 3200000
-  star3Threshold: 4800000
+  star1Threshold: 4660000
+  star2Threshold: 9330000
+  star3Threshold: 1400000
   backingTrackClip: {fileID: 8300000, guid: 7ef0fe749dd05eb4da4ac9a85d401428, type: 3}
   instrumentalClip: {fileID: 8300000, guid: 7ef0fe749dd05eb4da4ac9a85d401428, type: 3}
   notes:
