@@ -51,6 +51,7 @@ public class ScoreManager : MonoBehaviour
         currentCombo = 0;
     }
 
+    
     // El PowerUpManager nos dirá cuál es el multiplicador actual
     public void SetMultiplier(int multiplier)
     {

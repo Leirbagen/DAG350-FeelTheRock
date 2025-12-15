@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
+  chart: {fileID: 11400000, guid: 71ea9582d1ffd27498703e3da518cf3c, type: 2}
   sceneName: InfoBlackSabbath
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: c961f0678dbb58f4ea5dc3e9e1186fc1, type: 2}
+  chart: {fileID: 11400000, guid: 1565d3eef145ee243b177440b82f09cc, type: 2}
   sceneName: InfoQueen
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 2a2f52fd88a55164394da8a8cfcf30c8, type: 2}
+  chart: {fileID: 11400000, guid: 9e576189f4ff5024b97b687e6c6eb92f, type: 2}
   sceneName: InfoLedZepellin
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 45e66b68e124ea343bb96f4619487c54, type: 2}
+  chart: {fileID: 11400000, guid: 2bf93daee482988448eca61a2fc33050, type: 2}
   sceneName: InfoPinkFloyd
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -1642,7 +1642,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -6239742740721969175, guid: a0d52e8390b623144a4da13ff2750da3, type: 3}
+    m_HighlightedSprite: {fileID: -834174697875932306, guid: 985630b8488237442b885076cda4337b, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8320871792915837707, guid: 20a873778f7283d42b02c8b1edac3ad4, type: 3}
+  m_Sprite: {fileID: 1595067132119969393, guid: c5c8551ee74150d47b6f557ad4572d78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2092,7 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
+  chart: {fileID: 11400000, guid: 720bf0f08b538a2448cac61f6eab6798, type: 2}
   sceneName: InfoDeepPurple
   scoreText: {fileID: 0}
   starUI: {fileID: 0}

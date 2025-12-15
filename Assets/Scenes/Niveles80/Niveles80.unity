@@ -235,7 +235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5758590526363905351, guid: f6817a5fb7d75f148b289cfa71783634, type: 3}
+  m_Sprite: {fileID: 4166262826837862142, guid: 50a91c25098e7b447a188e5bd828a184, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2951702250702033365, guid: 82bbb0ca835eb31469c8aa7cc6e2d15c, type: 3}
+  m_Sprite: {fileID: -796142008349028922, guid: bf5586a3ff21a6e4284c20cfbe482273, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
+  chart: {fileID: 11400000, guid: 75ab81422d09ef84d861d9cd9c71fb32, type: 2}
   sceneName: GunsNRoses
   scoreText: {fileID: 1591029011}
   starUI: {fileID: 319620424}
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6491369983339234587, guid: 97d7ac8836f2ba74193c01bbfa489285, type: 3}
+  m_Sprite: {fileID: 5702802845788764549, guid: 4986b0b8de3cc164ab01069f158a4434, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
+  chart: {fileID: 11400000, guid: 88fa25fd8e6e4f24cbedd4ba7b95c771, type: 2}
   sceneName: IronMaiden
   scoreText: {fileID: 1481407635}
   starUI: {fileID: 332246444}
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 77a2e91fb2103e24bb80eb23fc12ecdc, type: 2}
+  chart: {fileID: 11400000, guid: 3a1f1d07eb992bb43bd1d7274561b1bc, type: 2}
   sceneName: Metallica
   scoreText: {fileID: 1636732068}
   starUI: {fileID: 153595060}

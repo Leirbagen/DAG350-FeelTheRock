@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: Arctic Monkeys
   levelID: feelTheRock_ArcticMonkeys
+  chartDelay: 2.4
   star1Threshold: 100000
   star2Threshold: 200000
   star3Threshold: 300000

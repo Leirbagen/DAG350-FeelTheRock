@@ -262,7 +262,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 2915276643247600307, guid: 7b7926b188b3c5746b633e1fb8f740a4, type: 3}
+    m_HighlightedSprite: {fileID: -8922853410126584424, guid: da66e2968b8587e4fbad1954669cff6f, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4186966041395645765, guid: b52e3f97a2c035e4e84a785777861998, type: 3}
+  m_Sprite: {fileID: -8182820879822706294, guid: f8f6d44157ed3ec469ba07cfc3071230, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -475,7 +475,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -485,7 +485,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -4116594321338710921, guid: ea7a2e4873b75b741b0e91849c4021de, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6094393308149165311, guid: cdd28442859b03041bfb4533869a7c0b, type: 3}
+  m_Sprite: {fileID: 6758727092757965784, guid: e2f7718d9f2440c4e812a24a4f9d4e7e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 77a2e91fb2103e24bb80eb23fc12ecdc, type: 2}
+  chart: {fileID: 11400000, guid: 3a1f1d07eb992bb43bd1d7274561b1bc, type: 2}
   sceneName: InfoMetallica
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
+  chart: {fileID: 11400000, guid: 88fa25fd8e6e4f24cbedd4ba7b95c771, type: 2}
   sceneName: InfoIronMaiden
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
+  chart: {fileID: 11400000, guid: 75ab81422d09ef84d861d9cd9c71fb32, type: 2}
   sceneName: InfoGunsNRoses
   scoreText: {fileID: 0}
   starUI: {fileID: 0}
@@ -1291,7 +1291,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 5495893341637535265, guid: 4f31499db4f60b94d872988420404da0, type: 3}
+    m_HighlightedSprite: {fileID: -6382309462512867749, guid: fb7a7f487ec85e8488344af1b758f8ae, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9028898955805777263, guid: f31605c0b947eac44bc92e48025d866a, type: 3}
+  m_Sprite: {fileID: 2840533211225097889, guid: 100d7599d161ec544bd1cb4c94e3dbc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

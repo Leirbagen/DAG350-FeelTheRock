@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: Radiohead
   levelID: feelTheRock_Radiohead
+  chartDelay: 2
   star1Threshold: 550000
   star2Threshold: 1100000
   star3Threshold: 1650000

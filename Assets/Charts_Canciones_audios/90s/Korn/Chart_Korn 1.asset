@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: Korn
   levelID: feelTheRock_Korn
+  chartDelay: 2.9
   star1Threshold: 490000
   star2Threshold: 980000
   star3Threshold: 1470000

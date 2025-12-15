@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class PowerUpManager : MonoBehaviour
     public int maxMultiplier = 0;
     public ScoreManager scoreManager;
     public UIManager uiManager;
+    public TextMeshProUGUI poderListoTexto;
+    Coroutine popLoop;
     [SerializeField] private Animator animator;
     [SerializeField] public int currentPowerUpValue = 0;
     [SerializeField] private bool isReady = false;
@@ -89,6 +92,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void activarPowerUp()
     {
+        poderListoTexto.gameObject.SetActive(false);
         isActivo = true;
         animator.gameObject.SetActive(true);
         animator.SetBool("isActive", true);
@@ -117,5 +121,67 @@ public class PowerUpManager : MonoBehaviour
         currentPowerUpValue = 0;
         uiManager?.UpdatePowerUp(currentPowerUpValue, comboToFill);
         // (Opcional) feedback/animación aquí
+    }
+
+
+    public void StartPopTexto()
+    {
+        if (popLoop == null)
+            popLoop = StartCoroutine(PopLoop());
+    }
+
+    public void StopPopTexto()
+    {
+        if (popLoop != null)
+        {
+            StopCoroutine(popLoop);
+            popLoop = null;
+            poderListoTexto.rectTransform.localScale = Vector3.one;
+        }
+    }
+
+    private IEnumerator PopLoop()
+    {
+        RectTransform rt = poderListoTexto.rectTransform;
+
+        Vector3 baseScale = Vector3.one;
+        Vector3 popScale = Vector3.one * 1.25f;
+
+        float duration = 0.18f;
+        float pause = 0.4f;
+
+        while (true)
+        {
+            // crecer
+            for (float t = 0; t < duration / 2f; t += Time.unscaledDeltaTime)
+            {
+                rt.localScale = Vector3.Lerp(baseScale, popScale, t / (duration / 2f));
+                yield return null;
+            }
+
+            // encoger
+            for (float t = 0; t < duration / 2f; t += Time.unscaledDeltaTime)
+            {
+                rt.localScale = Vector3.Lerp(popScale, baseScale, t / (duration / 2f));
+                yield return null;
+            }
+
+            rt.localScale = baseScale;
+
+            yield return new WaitForSecondsRealtime(pause);
+        }
+    }
+
+    private void Update()
+    {
+        if (isReady == true)
+        {
+            poderListoTexto.gameObject.SetActive(true);
+            StartPopTexto();
+        }
+        if (isReady == false)
+        {
+            poderListoTexto.gameObject.SetActive(false);
+        }
     }
 }

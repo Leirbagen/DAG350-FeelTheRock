@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
+  chart: {fileID: 11400000, guid: 71ea9582d1ffd27498703e3da518cf3c, type: 2}
   sceneName: BlackSabbath
   scoreText: {fileID: 1318687944}
   starUI: {fileID: 1144985870}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 45e66b68e124ea343bb96f4619487c54, type: 2}
+  chart: {fileID: 11400000, guid: 2bf93daee482988448eca61a2fc33050, type: 2}
   sceneName: PinkFloyd
   scoreText: {fileID: 1842602543}
   starUI: {fileID: 439590062}
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: 2a2f52fd88a55164394da8a8cfcf30c8, type: 2}
+  chart: {fileID: 11400000, guid: 9e576189f4ff5024b97b687e6c6eb92f, type: 2}
   sceneName: LedZeppelin
   scoreText: {fileID: 2078986568}
   starUI: {fileID: 1967933180}
@@ -2869,7 +2869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
+  chart: {fileID: 11400000, guid: 720bf0f08b538a2448cac61f6eab6798, type: 2}
   sceneName: DeepPurple
   scoreText: {fileID: 1378173518}
   starUI: {fileID: 825195208}
@@ -2925,7 +2925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: c961f0678dbb58f4ea5dc3e9e1186fc1, type: 2}
+  chart: {fileID: 11400000, guid: 1565d3eef145ee243b177440b82f09cc, type: 2}
   sceneName: Queen
   scoreText: {fileID: 1617763413}
   starUI: {fileID: 1923640755}

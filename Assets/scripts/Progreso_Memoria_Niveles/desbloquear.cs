@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheatCodeUnlockAll : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CheatCodeUnlockAll : MonoBehaviour
     public GameObject unlockMessageUI;
     public float messageDuration = 2f;
     private string currentInput = "";
+    public Canvas pantalla;
 
     void Update()
     {
@@ -71,8 +73,18 @@ public class CheatCodeUnlockAll : MonoBehaviour
                 markCompleted: true
             );
         }
+        RefreshCanvas();
         StartCoroutine(ShowUnlockMessage());
         print("codigo activado: TODOS los niveles desbloqueados.");
+    }
+
+    private void RefreshCanvas()
+    {
+        if (pantalla == null) return;
+
+        GameObject root = pantalla.gameObject;
+        root.SetActive(false);
+        root.SetActive(true);
     }
 
     private IEnumerator ShowUnlockMessage()

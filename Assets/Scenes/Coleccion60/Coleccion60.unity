@@ -988,7 +988,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 2840533211225097889, guid: 33a055fd5e03ad64d88a1ab7b88940c0, type: 3}
+    m_HighlightedSprite: {fileID: -1394598370067182730, guid: 5648f049092c994489387b58d47c2e9d, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7203201959836402923, guid: 8378f38d80dceb34ba9338a504b258c2, type: 3}
+  m_Sprite: {fileID: -6451957909328898995, guid: c8abbfb0e73c62c458080ba8b4c50659, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+  chart: {fileID: 11400000, guid: 11fc412a8661df04d8fa1976c4ac9f06, type: 2}
   sceneName: InfoTheBeatles
   scoreText: {fileID: 0}
   starUI: {fileID: 0}

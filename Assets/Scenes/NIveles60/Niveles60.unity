@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6814c9da7fc764482b72c57aa8bb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItem
-  chart: {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+  chart: {fileID: 11400000, guid: 11fc412a8661df04d8fa1976c4ac9f06, type: 2}
   sceneName: TheBeatles_LetItBe
   scoreText: {fileID: 1178024409}
   starUI: {fileID: 95542574}

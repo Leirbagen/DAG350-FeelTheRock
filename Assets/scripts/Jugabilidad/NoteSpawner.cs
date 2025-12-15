@@ -39,7 +39,11 @@ public class NoteSpawner : MonoBehaviour
 
         float songTimeAbsolute = audioManager != null ? audioManager.GetSongDspTime() : Time.time;
         if (songTimeAbsolute < 0f) return;
-        float sontTimeRelative = songTimeAbsolute - spawnerAnchorTime;
+
+        float delay = (currentSong != null) ? currentSong.chartDelay : 0f;
+        if (songTimeAbsolute < delay) return; // aún no empieza el chart
+
+        float sontTimeRelative = (songTimeAbsolute - delay) - spawnerAnchorTime;
 
         while (nextNoteIndex < currentSong.notes.Count)
         {

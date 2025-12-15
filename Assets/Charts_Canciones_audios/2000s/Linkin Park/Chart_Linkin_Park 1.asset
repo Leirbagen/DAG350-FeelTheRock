@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: Linkin Park
   levelID: feelTheRock_LinkinPark
+  chartDelay: 3.1
   star1Threshold: 110000
   star2Threshold: 220000
   star3Threshold: 330000

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: System Of A Down
   levelID: feelTheRock_SystemOfaDown
+  chartDelay: 2.8
   star1Threshold: 330000
   star2Threshold: 655000
   star3Threshold: 980000

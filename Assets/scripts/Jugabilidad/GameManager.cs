@@ -103,7 +103,14 @@ public class GameManager : MonoBehaviour
         {
             uiManager.bienTexto.gameObject.SetActive(false);
         }
-        if(uiManager?.perfectoTexto.gameObject.activeSelf == true)
+        if (uiManager?.A.gameObject.activeSelf == true || uiManager?.S.gameObject.activeSelf == true || uiManager?.D.gameObject.activeSelf == true || uiManager?.F.gameObject.activeSelf == true)
+        {
+            uiManager.A.gameObject.SetActive(false);
+            uiManager.S.gameObject.SetActive(false);
+            uiManager.D.gameObject.SetActive(false);
+            uiManager.F.gameObject.SetActive(false);
+        }
+        if (uiManager?.perfectoTexto.gameObject.activeSelf == true)
         {
             uiManager.perfectoTexto.gameObject.SetActive(false);
         }
@@ -120,6 +127,10 @@ public class GameManager : MonoBehaviour
         uiManager?.ShowPausePanel(false);
         audioManager?.UnpauseAll();
         noteSpawner?.StartSpawning();
+        uiManager.A.gameObject.SetActive(true);
+        uiManager.S.gameObject.SetActive(true);
+        uiManager.D.gameObject.SetActive(true);
+        uiManager.F.gameObject.SetActive(true);
         Time.timeScale = 1f;
     }
 
@@ -142,10 +153,7 @@ public class GameManager : MonoBehaviour
         scoreManager.AddScore(type);
         healthManager.OnNoteHit();
         powerUpManager.OnNoteHit(scoreManager.currentCombo);
-        /*animatorBtn1.SetBool("ispresionado", true);
-        animatorBtn2.SetBool("ispresionada2", true);
-        animatorBtn3.SetBool("ispresionada3", true);
-        animatorBtn4.SetBool("ispresionada4", true);*/
+       
 
         UpdateAllUI();
     }
@@ -185,6 +193,10 @@ public class GameManager : MonoBehaviour
             inputManager.enabled = false;
         // 3. Muestra el panel de Game Over
         uiManager?.ShowGameOverPanel(true);
+        uiManager.A.gameObject.SetActive(false);
+        uiManager.S.gameObject.SetActive(false);
+        uiManager.D.gameObject.SetActive(false);
+        uiManager.F.gameObject.SetActive(false);
         gameOver.Play();
     }
     public void RestartRun()
@@ -202,6 +214,10 @@ public class GameManager : MonoBehaviour
         healthManager.ResetHealth();   
         powerUpManager.ResetPower();  
         uiManager?.restartStarts();
+        uiManager.A.gameObject.SetActive(true);
+        uiManager.S.gameObject.SetActive(true);
+        uiManager.D.gameObject.SetActive(true);
+        uiManager.F.gameObject.SetActive(true);
 
         // 3. Elimina notas vivas 
         foreach (var note in GameObject.FindGameObjectsWithTag("Nota"))
@@ -223,6 +239,10 @@ public class GameManager : MonoBehaviour
         uiManager?.ShowFinishPanel(true);
         audioManager?.StopAllAudio();
         noteSpawner?.StopSpawning();
+        uiManager.A.gameObject.SetActive(false);
+        uiManager.S.gameObject.SetActive(false);
+        uiManager.D.gameObject.SetActive(false);
+        uiManager.F.gameObject.SetActive(false);
         int stars = EvaluateStars(scoreManager.currentScore, star1Threshold, star2Threshold, star3Threshold);
         GameProgress.Instance.ReportResult(levelID, scoreManager.currentScore, stars, true);
     }

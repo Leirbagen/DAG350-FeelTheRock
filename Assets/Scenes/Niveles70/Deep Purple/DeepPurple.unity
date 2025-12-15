@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 598069944845344960, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: currentSong
       value: 
-      objectReference: {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
+      objectReference: {fileID: 11400000, guid: 720bf0f08b538a2448cac61f6eab6798, type: 2}
     - target: {fileID: 883141237683122346, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -503,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: song
       value: 
-      objectReference: {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
+      objectReference: {fileID: 11400000, guid: 720bf0f08b538a2448cac61f6eab6798, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

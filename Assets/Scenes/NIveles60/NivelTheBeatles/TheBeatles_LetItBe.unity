@@ -302,6 +302,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 598069944845344960, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
+      propertyPath: currentSong
+      value: 
+      objectReference: {fileID: 11400000, guid: 11fc412a8661df04d8fa1976c4ac9f06, type: 2}
     - target: {fileID: 1552572810913924639, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -501,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: song
       value: 
-      objectReference: {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+      objectReference: {fileID: 11400000, guid: 11fc412a8661df04d8fa1976c4ac9f06, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

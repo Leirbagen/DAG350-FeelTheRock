@@ -1,7 +1,6 @@
 using UnityEngine;
 
-// NO HAY CAMBIOS EN ESTE SCRIPT, PERO LO INCLUYO PARA QUE TENGAS EL PAQUETE COMPLETO
-// PUEDES VERIFICAR QUE TU CÓDIGO SEA IGUAL A ESTE.
+
 public class Nota_Movimiento : MonoBehaviour
 {
     private Vector3 startPos;

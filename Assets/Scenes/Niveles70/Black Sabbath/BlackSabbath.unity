@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 598069944845344960, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: currentSong
       value: 
-      objectReference: {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
+      objectReference: {fileID: 11400000, guid: 71ea9582d1ffd27498703e3da518cf3c, type: 2}
     - target: {fileID: 1552572810913924639, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -350,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 7783457608680932637, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: song
       value: 
-      objectReference: {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
+      objectReference: {fileID: 11400000, guid: 71ea9582d1ffd27498703e3da518cf3c, type: 2}
     - target: {fileID: 7967401462213779844, guid: 7cdae396b916e5b44b4f09bcd947266a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

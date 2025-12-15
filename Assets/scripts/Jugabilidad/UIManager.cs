@@ -16,6 +16,11 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI scoreTextFinish;
     public TextMeshProUGUI comboText;
     public TextMeshProUGUI multiplierText;
+    public TextMeshProUGUI A;
+    public TextMeshProUGUI S;
+    public TextMeshProUGUI D;
+    public TextMeshProUGUI F;
+    public TextMeshProUGUI PoderListo;
     [Header("TipoDeHit")]
     public TextMeshProUGUI bienTexto;
     public TextMeshProUGUI perfectoTexto;
@@ -124,6 +129,41 @@ public class UIManager : MonoBehaviour
         UpdateStarsUI();
     }
 
+
+
+    public void PopCombo()
+    {
+        StartCoroutine(PopComboani());
+    }
+
+    private IEnumerator PopComboani()
+    {
+        RectTransform rt = comboText.rectTransform;
+
+        Vector3 baseScale = Vector3.one;
+        Vector3 popScale = Vector3.one * 1.25f;
+
+        float duration = 0.15f;
+        float half = duration / 2f;
+
+        // agrandar
+        for (float t = 0; t < half; t += Time.unscaledDeltaTime)
+        {
+            rt.localScale = Vector3.Lerp(baseScale, popScale, t / half);
+            yield return null;
+        }
+
+        // achicar
+        for (float t = 0; t < half; t += Time.unscaledDeltaTime)
+        {
+            rt.localScale = Vector3.Lerp(popScale, baseScale, t / half);
+            yield return null;
+        }
+
+        rt.localScale = baseScale;
+    }
+
+
     public void UpdateCombo(int combo)
     {
         if (comboText != null && scoreManager != null)
@@ -131,7 +171,8 @@ public class UIManager : MonoBehaviour
             if (combo >= scoreManager.comboToShowThreshold)
             {
                 comboText.gameObject.SetActive(true);
-                comboText.text = ""+combo;
+                comboText.text = ""+ combo;
+                PopCombo();
             }
             else
             {

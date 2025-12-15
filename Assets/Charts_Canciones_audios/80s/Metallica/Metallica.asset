@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   songName: Metallica
   levelID: feelTheRock_Metallica
-  star1Threshold: 475000
-  star2Threshold: 945000
-  star3Threshold: 1415000
+  chartDelay: 0.5
+  star1Threshold: 700000
+  star2Threshold: 1400000
+  star3Threshold: 2100000
   backingTrackClip: {fileID: 8300000, guid: e0be1c03b40d254468ebb36e07e12a47, type: 3}
   instrumentalClip: {fileID: 8300000, guid: e0be1c03b40d254468ebb36e07e12a47, type: 3}
   notes:

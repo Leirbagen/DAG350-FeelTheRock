@@ -10,6 +10,9 @@ public class SongChart : ScriptableObject
     [Header("Id del nivel")]
     public string levelID;
 
+    [Header("Timing (Ajuste fino por canción)")]
+    public float chartDelay = 0.5f; // segundos
+
     public int star1Threshold;
     public int star2Threshold;
     public int star3Threshold;

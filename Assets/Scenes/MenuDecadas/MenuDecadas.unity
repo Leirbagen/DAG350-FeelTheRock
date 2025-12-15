@@ -589,7 +589,7 @@ MonoBehaviour:
   decadeId: 60s
   sceneName: Niveles60
   chartsInDecade:
-  - {fileID: 11400000, guid: effb6bdd5069671409cf1fab39ccaf91, type: 2}
+  - {fileID: 11400000, guid: 11fc412a8661df04d8fa1976c4ac9f06, type: 2}
   - {fileID: 11400000, guid: 933a91cebe11d8245a6eff4aa2ec93c1, type: 2}
   - {fileID: 11400000, guid: d343c94f101555d4da5b117a87a4ca9e, type: 2}
   targetImage: {fileID: 295420051}
@@ -971,11 +971,11 @@ MonoBehaviour:
   decadeId: 70s
   sceneName: Niveles70
   chartsInDecade:
-  - {fileID: 11400000, guid: 2a2f52fd88a55164394da8a8cfcf30c8, type: 2}
-  - {fileID: 11400000, guid: 8386b5843520fa34a86510028cebd3ed, type: 2}
-  - {fileID: 11400000, guid: a7386cf2915d8a14aa64413aa22ef326, type: 2}
-  - {fileID: 11400000, guid: 45e66b68e124ea343bb96f4619487c54, type: 2}
-  - {fileID: 11400000, guid: c961f0678dbb58f4ea5dc3e9e1186fc1, type: 2}
+  - {fileID: 11400000, guid: 9e576189f4ff5024b97b687e6c6eb92f, type: 2}
+  - {fileID: 11400000, guid: 71ea9582d1ffd27498703e3da518cf3c, type: 2}
+  - {fileID: 11400000, guid: 720bf0f08b538a2448cac61f6eab6798, type: 2}
+  - {fileID: 11400000, guid: 2bf93daee482988448eca61a2fc33050, type: 2}
+  - {fileID: 11400000, guid: 1565d3eef145ee243b177440b82f09cc, type: 2}
   targetImage: {fileID: 858332292}
   lockedSprite: {fileID: -789428199773452378, guid: 89f978fc1db591148bb618ce40ad8b01, type: 3}
   unlockedSprite: {fileID: 2913129571337439578, guid: f64e70226e51ddd4496eabd1400cea64, type: 3}
@@ -1031,6 +1031,7 @@ MonoBehaviour:
   - feelTheRock_ArcticMonkeys
   unlockMessageUI: {fileID: 128642130}
   messageDuration: 2
+  pantalla: {fileID: 1688842513}
 --- !u!4 &867394259
 Transform:
   m_ObjectHideFlags: 0
@@ -1463,142 +1464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1573838712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573838713}
-  - component: {fileID: 1573838715}
-  - component: {fileID: 1573838714}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1573838713
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573838712}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2137373843}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1573838714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573838712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1573838715
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573838712}
-  m_CullTransparentMesh: 1
 --- !u!1 &1688842510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,9 +1840,9 @@ MonoBehaviour:
   decadeId: 80s
   sceneName: Niveles80
   chartsInDecade:
-  - {fileID: 11400000, guid: 77a2e91fb2103e24bb80eb23fc12ecdc, type: 2}
-  - {fileID: 11400000, guid: 9b5faa30be072504c90f3ef4dbae1597, type: 2}
-  - {fileID: 11400000, guid: de5b1d0a1ccda2043b9ce704dcd70c7d, type: 2}
+  - {fileID: 11400000, guid: 3a1f1d07eb992bb43bd1d7274561b1bc, type: 2}
+  - {fileID: 11400000, guid: 88fa25fd8e6e4f24cbedd4ba7b95c771, type: 2}
+  - {fileID: 11400000, guid: 75ab81422d09ef84d861d9cd9c71fb32, type: 2}
   targetImage: {fileID: 2070452652}
   lockedSprite: {fileID: -789428199773452378, guid: 89f978fc1db591148bb618ce40ad8b01, type: 3}
   unlockedSprite: {fileID: 1516892974991655508, guid: cbfa8d05db1fc5041b87e149a096389e, type: 3}
@@ -2014,8 +1879,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1573838713}
+  m_Children: []
   m_Father: {fileID: 1688842514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2035,6 +1899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904f97ff6a0e3db41b02aa223eed7818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetProgressButton
+  pantalla: {fileID: 1688842513}
 --- !u!114 &2137373845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,7 +1919,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2064,8 +1929,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -3648505728647009572, guid: ec83c379b84b6134889f84c9ad762184, type: 3}
+    m_PressedSprite: {fileID: 509676363043768516, guid: 38593505e8919d044af04526016e94ce, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2111,7 +1976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6978098356892758718, guid: b7dd110af85bf6f40a75847927aa8f8e, type: 3}
+  m_Sprite: {fileID: 7897368930037539606, guid: 6d9f8716c72f7734f92d067de14f3bac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
