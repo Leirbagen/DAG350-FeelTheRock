@@ -32,3 +32,12 @@ The primary goal of this project was to apply solid **Game Architecture** and **
 <img width="692" height="388" alt="Screen Recording 2026-05-18 115902" src="https://github.com/user-attachments/assets/a3454004-d2da-46bd-95bb-a19fb9bb0279" />
 
 
+SOME INTERFACES: 
+
+
+
+<img width="692" height="388" alt="Screen Recording 2026-05-18 151417" src="https://github.com/user-attachments/assets/27f36673-4392-459a-a0f2-6193b9b5f3c9" />
+
+
+
+
