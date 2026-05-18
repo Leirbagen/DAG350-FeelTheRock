@@ -40,4 +40,22 @@ SOME INTERFACES:
 
 
 
+GAMEPLAY: 
+
+
+
+<img width="800" height="449" alt="ScreenRecording2026-05-18151306-ezgif com-cut" src="https://github.com/user-attachments/assets/60113a59-7f49-415a-b742-573d5a6ec4a3" />
+
+
+
+
+
+LINK TO DOWNLOAD THE GAME: 
+https://drive.google.com/drive/folders/1SqdIbKULUmlbE68mygWJ5qC_HVteDK0p
+
+
+
+
+
+
 
