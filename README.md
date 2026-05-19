@@ -32,9 +32,22 @@ Welcome to Feel The Rock! This is a collaborative game development project where
 
 
 The primary goal of this project was to apply solid **Game Architecture** and **Object-Oriented Programming (OOP)** principles within a 2D environment. By leading the development of the core mechanics, this project demonstrates:
-* **C# Scripting & OOP:** Writing clean, modular, and efficient code to handle the main game logic and states.
-* **Physics & Interactions:** Managing player movement, collisions, and dynamic mechanics smoothly.
-* **Engine Mastery:** Utilizing Unity's component-based architecture, prefabs, and scene management for an optimized workflow.
+
+
+* **C# Scripting & OOP:** Writing clean, modular code utilizing an event-driven approach to efficiently decouple game states and UI updates.
+* **Rhythm Mechanics & Audio Sync:** Implementing precise gameplay loops using the engine's internal audio clock for exact note spawning and dual-track synchronization, ensuring accuracy independent of fluctuating framerates.
+* **Asynchronous Logic:** Extensive use of coroutines to handle non-blocking operations, including smooth UI animations, delayed scene transitions, and complex audio crossfading.
+* **Data Persistence:** Managing local save states through JSON serialization, persistently handling player progression, high scores, and level unlocking across sessions.
+* **Custom Editor Tooling:** Developing in-editor helper tools to record gameplay inputs in real-time and bake them directly into data containers, drastically streamlining the level design process.
+* **Engine Mastery:** Utilizing a component-based architecture, prefabs, animation state machines, and canvas management for an optimized workflow.
+
+
+
+Design Patterns Applied
+* **Singleton & Persistent Systems:** Used for global systems and cross-scene controllers to handle background logic, data serialization, and seamless audio transitions without losing state between levels.
+* **Observer Pattern:** Applied to decouple systems; entities broadcast state changes via events, allowing other elements (like UI or visual effects) to react independently without tight coupling.
+* **Data-Driven Design:** Leveraged native data containers to store rhythm maps, timings, and track references, cleanly separating level data from the core spawner logic.
+* **Separation of Concerns:** Divided game logic into highly specialized managers handling specific tasks (inputs, health, scoring), keeping the business logic completely isolated from the presentation and UI layers.
 
 
 
