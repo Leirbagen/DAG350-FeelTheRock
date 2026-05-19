@@ -5,8 +5,22 @@
 A rhythm-based rock game inspired by the *Guitar Hero* style. The main objective is to explore the evolution of rock music over time, categorized by decades. The game features levels dedicated to the most famous rock bands of each era, along with interesting trivia about them.
 
 **Credits & Development Team:**
+
+Programming Team: 
+
+
 * **Gabriel Molina Molina** (Lead Developer), alongside: Andres Choque (Chart Helper), Jorge Quinquivi (Chart Helper, Developer).
+
+
+Design Team: 
+
+
 * **Lexi Aylin Legurguro Isnado** (Lead Art Direction) and **Pauline Silvia Avarado Chavez** (Co-Lead Art Direction), with various student contributors from the DAG350 class: Cristian Zenon Ávalos (Artist)... etc.
+
+
+Director 
+
+
 * **Jose Alex Ojeda Trigo** (Director).
 
 
