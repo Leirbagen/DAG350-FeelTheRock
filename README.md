@@ -1,18 +1,13 @@
 # DAG350-FeelTheRock
-guitar hero game style
 
 
-Code for everything unlock: dag350feeltherock
+**Description:**
+A rhythm-based rock game inspired by the *Guitar Hero* style. The main objective is to explore the evolution of rock music over time, categorized by decades. The game features levels dedicated to the most famous rock bands of each era, along with interesting trivia about them.
 
-
-Desarrollado por: 
--Gabriel Molina Molina (lead developer), con personal de : Andres Choque (charthelper) , Jorge Quinquivi (charthelper, developer) 
--Lexi Aylin Legurguro Isnado ( lead Art direction), Pauline Silvia Avarado Chavez (Co-lead art direction) con personal de estudiantes variados de DAG350: Cristian Zenon Ávalos (Artist)....etc.
--Jose Alex Ojeda Trigo (Director) 
-
-
-Descripción: 
-Juego de Rock de ritmo, basado en un guitar hero style, con el objetivo de descubrir el rock y su evolución a traves del paso del tiempo, ejemplificados en décadas. Con niveles de las bandas mas famosas de rock de cada década, y con curiosidades de las mismas
+**Credits & Development Team:**
+* **Gabriel Molina Molina** (Lead Developer), alongside: Andres Choque (Chart Helper), Jorge Quinquivi (Chart Helper, Developer).
+* **Lexi Aylin Legurguro Isnado** (Lead Art Direction) and **Pauline Silvia Avarado Chavez** (Co-Lead Art Direction), with various student contributors from the DAG350 class: Cristian Zenon Ávalos (Artist)... etc.
+* **Jose Alex Ojeda Trigo** (Director).
 
 
 A 2D interactive game developed in Unity, driven by robust C# programming.
@@ -26,6 +21,10 @@ The primary goal of this project was to apply solid **Game Architecture** and **
 * **C# Scripting & OOP:** Writing clean, modular, and efficient code to handle the main game logic and states.
 * **Physics & Interactions:** Managing player movement, collisions, and dynamic mechanics smoothly.
 * **Engine Mastery:** Utilizing Unity's component-based architecture, prefabs, and scene management for an optimized workflow.
+
+
+
+Code to unlock all levels: dag350feeltherock
 
 
 
