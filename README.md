@@ -63,6 +63,9 @@ GAMEPLAY:
 
 
 
+LINK TO THE DEMO REEL: 
+https://youtu.be/KEmJAQBCxuA?si=uiFbIaoPZKG-8RAR
+
 LINK TO DOWNLOAD THE GAME: 
 https://drive.google.com/drive/folders/1SqdIbKULUmlbE68mygWJ5qC_HVteDK0p
 
